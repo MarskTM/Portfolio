@@ -30,16 +30,16 @@ export const theme = create((set) => ({
 }))
 
 // -------------------------------- Component layout --------------------------------
-import Header from "@/components/header/page";
+import Header from "../components/header/page";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${theme} ${geistSans.variable} ${geistMono.variable} antialiased`}
-      > 
+      >
         <Providers>
-          <Header /> 
+          <Header />
           {children}
         </Providers>
       </body>
