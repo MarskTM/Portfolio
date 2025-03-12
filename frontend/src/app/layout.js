@@ -31,16 +31,18 @@ export const theme = create((set) => ({
 
 // -------------------------------- Component layout --------------------------------
 import Header from "../components/header/page";
+import Footer from "../components/footer/page";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${theme} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${theme} ${geistSans.variable} ${geistMono.variable} antialiased bg-amber-50`}
       >
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
