@@ -31,11 +31,11 @@ export default function Experience() {
     return (
         <section className="w-full m-auto py-28 bg-gray-50">
             <div className="max-w-3xl mx-auto text-center">
-                <span className="px-4 py-1 text-sm font-semibold text-gray-600 bg-gray-300 rounded-full">
+                <span className="px-4 py-1 text-xl md:text-xl font-semibold text-gray-600 bg-gray-300 rounded-full">
                     Experience
                 </span>
-                <h2 className="mt-4 text-xl font-semibold">
-                    Here is a quick summary of my most recent experiences:
+                <h2 className="mt-4 text-base font-semibold text-gray-600 leading-relaxed">
+                    Here is a quick summary of my most recent experiences
                 </h2>
             </div>
 

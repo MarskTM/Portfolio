@@ -6,9 +6,10 @@ import { SunIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const navigation = [
-    { name: "About", href: "#about" },
-    { name: "Work", href: "#work" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Home", href: "#about" },
+    { name: "Experience", href: "#work" },
+    { name: "Projects", href: "#testimonials" },
+    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -43,7 +44,7 @@ export default function Header() {
                         href="/blog"
                         className="px-4 py-2 text-white bg-black rounded-full hover:bg-gray-800 transition"
                     >
-                        My Blog
+                        Download CV
                     </Link>
                 </nav>
 

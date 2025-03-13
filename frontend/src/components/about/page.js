@@ -19,7 +19,7 @@ export default function About() {
                     I began with JavaScript, built apps using Angular, and then switched to React. Now, I’m working with Next.js, TypeScript, Tailwind, and more.
                 </p>
 
-              
+
                 <div className="mt-6">
                     <h3 className="font-semibold text-gray-800">Here’s some tech and frameworks I love and work with:</h3>
                     <div className="flex flex-wrap gap-2 mt-2">
@@ -47,10 +47,14 @@ export default function About() {
                     </div>
                 </div>
 
-                
+
                 <p className="mt-6 text-gray-700">
                     <span className="font-bold">Fun fact:</span> I've been learning Figma just for fun, mainly to create templates and get a feel for how the tool works. It’s been a great way to boost my creativity!
                 </p>
+            </div>
+
+            <div className="hidden md:block">
+                
             </div>
         </div>
     );
