@@ -3,7 +3,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/solid";
 export default function Footer() {
     return (
         <footer
-            className="relative container sm:bg-auto xl:bg-[length:100%] bg-center bg-no-repeat text-gray-800 dark:text-white h-80 mt-28 pt-22 m-auto"
+            className="relative container bg-auto xl:bg-[length:100%] bg-center bg-no-repeat text-gray-800 dark:text-white h-80 mt-28 pt-22 m-auto"
             style={{ backgroundImage: "url('/images/footer_bg.svg')" }}
         >
             <div className=" mx-auto px-6 lg:px-20">

@@ -1,4 +1,4 @@
-import { Card, CardFooter, CardBody, Image } from "@heroui/react";
+import { Card, CardFooter, CardBody, Image, Pagination } from "@heroui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const projects = [
@@ -41,7 +41,7 @@ export default function Project() {
 
             <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
-                    <Card className="border border-gray-200 rounded-xl shadow-lg w-sm">
+                    <Card className="border border-gray-200 rounded-xl shadow-lg w-sm" key={index}>
                         <CardBody className="overflow-visible">
                             <Image
                                 className="object-cover rounded-xl"
@@ -58,7 +58,7 @@ export default function Project() {
                             {/* Công nghệ sử dụng */}
                             <div className="flex flex-wrap gap-2">
                                 {project.tech.map((tech, idx) => (
-                                    <span key={idx} className="px-3 py-1 text-sm bg-gray-200 rounded-full">
+                                    <span key={idx + index} className="px-3 py-1 text-sm bg-gray-200 rounded-full">
                                         {tech}
                                     </span>
                                 ))}
@@ -85,26 +85,10 @@ export default function Project() {
                             </div>
                         </CardFooter>
                     </Card>
-
-
-                    // <div key={index} className="w-52 p-6 bg-white shadow-lg rounded-xl flex flex-col md:space-x-6">
-                    //     {/* Ảnh project */}
-                    //     <div className="relative w-full md:w-1/2 h-60 rounded-lg overflow-hidden">
-                    //         <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
-                    //     </div>
-
-                    //     {/* Thông tin dự án */}
-                    //     <div className="mt-4 md:mt-0 md:w-1/2">
-                    //         <h3 className="text-2xl font-semibold text-gray-900">{project.title}</h3>
-                    //         <p className="mt-2 text-gray-600">{project.description}</p>
-
-
-
-
-                    //     </div>
-                    // </div>
                 ))}
             </div>
+
+            <Pagination showControls initialPage={1} total={10} />;
         </section>
     );
 }
