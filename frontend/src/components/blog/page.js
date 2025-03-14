@@ -35,7 +35,7 @@ export default function Blog() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lectus lacinia, scelerisque mauris ac, lacinia lorem.
                 </p>
 
-                {/* Danh sách bài viết
+                {/* Danh sách bài viết */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                     {blogPosts.map((post, index) => (
                         <Link
@@ -51,7 +51,7 @@ export default function Blog() {
                             </div>
                         </Link>
                     ))}
-                </div> */}
+                </div>
             </div>
         </section>
     );
