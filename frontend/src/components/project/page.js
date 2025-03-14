@@ -1,5 +1,7 @@
-import { Card, CardFooter, CardBody, Image, Pagination } from "@heroui/react";
+import { useState } from "react";
+import { Card, CardFooter, CardBody, Image } from "@heroui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import Pagination from "../pagination/page";
 
 const projects = [
     {
@@ -29,19 +31,21 @@ const projects = [
 ];
 
 export default function Project() {
+    const [currentPage, setCurrentPage] = useState(1);
+
     return (
         <section className="w-full my-28 mx-auto container">
-            <div className="mx-auto text-left">
-                <h2 className="text-xl md:text-xl font-bold text-gray-600 border-b-2 max-w-max">My Project</h2>
+            <div className="md:mx-16 text-left">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-600 border-b-2 max-w-max">Projects</h2>
                 <p className="mt-2 text-gray-600">
                     Check out some of my recent work – cool products I've been part of, built using the latest tech and libraries
                     to create something awesome!
                 </p>
             </div>
 
-            <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4">
+            <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-1 gap-4 justify-items-center">
                 {projects.map((project, index) => (
-                    <Card className="border border-gray-200 rounded-xl shadow-lg w-sm" key={index}>
+                    <Card className="w-sm border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 min-h-[370px]" key={index}>
                         <CardBody className="overflow-visible">
                             <Image
                                 className="object-cover rounded-xl"
@@ -87,8 +91,9 @@ export default function Project() {
                     </Card>
                 ))}
             </div>
-
-            <Pagination showControls initialPage={1} total={10} />;
+            <div className="md:mx-16 flex flex-row justify-end mt-20">
+                <Pagination showControls currentPage={currentPage} totalPages={5} onPageChange={(page) => setCurrentPage(page)} />;
+            </div>
         </section>
     );
 }

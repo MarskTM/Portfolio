@@ -24,19 +24,18 @@ const blogPosts = [
 
 export default function Blog() {
     return (
-        <section className="w-full m-auto py-28 ">
-            <div className="max-w-5xl mx-auto px-6">
+        <section className="w-full m-auto pb-28 container">
+            <div className="mx-auto px-6 text-center">
                 {/* Tiêu đề */}
-                <h2 className="text-lg font-bold text-gray-900 flex items-center space-x-2">
-                    <span>Latest</span>
-                    <span className="text-black">posts</span>
-                    <span className="text-gray-500">/ snippets</span>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-600 flex items-center justify-center space-x-2">
+                    <span>My Blog</span>
+                    {/* <span className="text-gray-500">/ snippets</span> */}
                 </h2>
                 <p className="mt-2 text-gray-600">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lectus lacinia, scelerisque mauris ac, lacinia lorem.
                 </p>
 
-                {/* Danh sách bài viết */}
+                {/* Danh sách bài viết
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                     {blogPosts.map((post, index) => (
                         <Link
@@ -52,7 +51,7 @@ export default function Blog() {
                             </div>
                         </Link>
                     ))}
-                </div>
+                </div> */}
             </div>
         </section>
     );
