@@ -48,7 +48,7 @@ export default function Project() {
                     <Card className="w-sm md:w-xs my-3 lg:w-sm border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 min-h-[370px]" key={index}>
                         <CardBody className="overflow-visible">
                             <Image
-                                className="rounded-xl "
+                                className="rounded-xl"
                                 alt={project.title}
                                 src={project.image}
                                 width="100%"
@@ -93,7 +93,7 @@ export default function Project() {
                 ))}
             </div>
             <div className="md:mx-16 flex flex-row justify-end mt-12">
-                <Pagination showControls currentPage={currentPage} totalPages={5} onPageChange={(page) => setCurrentPage(page)} />;
+                <Pagination showControls currentPage={currentPage} totalPages={5} onPageChange={(page) => setCurrentPage(page)} />
             </div>
         </section>
     );

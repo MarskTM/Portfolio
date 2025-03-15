@@ -1,33 +1,48 @@
-import Image from "next/image";
-import { Badge } from "@headlessui/react";
+
+import { Image } from "@heroui/react";
 import { UserCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 export default function BlogCard({ title, description, author, time, category, image }) {
     return (
-        <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+        <div className="flex items-start space-x-4 p-4 bg-white rounded-lg transition-all duration-500">
             {/* Hình ảnh */}
-            <div className="w-20 h-20 flex-shrink-0 bg-gray-300 rounded-lg overflow-hidden">
-                {image && <Image src={image} alt={title} width={80} height={80} objectFit="cover" />}
+            <div className="w-48 h-36 flex-shrink-0 rounded-2xl overflow-hidden">
+                {image &&
+                    <Image
+                        src={image}
+                        alt={title}
+                        layout="fill"
+                    />
+                }
             </div>
 
             {/* Nội dung */}
             <div className="flex-1">
                 {/* Danh mục */}
-                <Badge className="text-sm text-gray-600 bg-gray-200 px-2 py-1 rounded-md">
-                    {category}
-                </Badge>
+                <div className="flex flex-row space-x-2">
+
+                    <div className="w-max text-sm text-gray-600 px-1 py-1 rounded-4xl shadow-sm">
+                        <span className="px-2 text-xs">
+                            {category}
+                        </span>
+                    </div>
+
+                </div>
+
+
+
 
                 {/* Tiêu đề */}
-                <h2 className="text-lg font-semibold mt-2 hover:text-blue-500 cursor-pointer">
+                <h2 className="text-xl text-left font-semibold mt-2 hover:text-blue-500 cursor-pointer">
                     {title}
                 </h2>
 
                 {/* Mô tả */}
-                <p className="text-gray-600 text-sm mt-1 line-clamp-2">{description}</p>
+                <p className="text-gray-600 text-base text-left mt-1 line-clamp-2">{description}</p>
 
                 {/* Tác giả & Thời gian */}
                 <div className="flex items-center text-gray-500 text-xs mt-3 space-x-2">
-                    <UserCircleIcon className="w-4 h-4" />
+                    <UserCircleIcon className="w-6 h-6" />
                     <span>{author}</span>
                     <ClockIcon className="w-4 h-4" />
                     <span>{time}</span>
