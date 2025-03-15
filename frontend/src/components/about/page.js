@@ -7,7 +7,7 @@ export default function About() {
         <div
             className="container mx-auto flex items-center justify-between my-28 min-h-96 bg-[url('/images/about_background.svg')] bg-[length:80%] bg-[position:right_center] bg-no-repeat"
         >
-            <div className="p-8 md:p-12 bg-gray-100 bg-opacity-90 max-w-4xl min-h-[500px]">
+            <div className="p-8 md:p-12 xl:p-14 bg-gray-100 bg-opacity-90 lg:max-w-2xl xl:max-w-4xl  min-h-[500px]">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center">
                     A BIT ‘BOUT MY JOURNEY
                 </h2>

@@ -9,7 +9,7 @@ export default function Banner() {
         <section className="w-full flex justify-center my-28">
             <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 rounded-lg p-6">
                 {/* Text Section */}
-                <div className="flex-2 mx-28">
+                <div className="flex-2 lg:mx-28">
                     <h1 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center gap-2">
                         Hi, I’m Sagar <span className="wave text-2xl">👋</span>
                     </h1>
