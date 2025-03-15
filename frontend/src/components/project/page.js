@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardFooter, CardBody, Image } from "@heroui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import Pagination from "../pagination/page";
+import Pagination from "@components/pagination/page";
 
 const projects = [
     {
@@ -35,7 +35,7 @@ export default function Project() {
 
     return (
         <section className="w-full my-28 mx-auto container">
-            <div className="md:mx-16 text-left">
+            <div className="text-left">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-600 border-b-2 max-w-max">Projects</h2>
                 <p className="mt-2 text-gray-600">
                     Check out some of my recent work – cool products I've been part of, built using the latest tech and libraries
@@ -43,24 +43,25 @@ export default function Project() {
                 </p>
             </div>
 
-            <div className="mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-1 gap-4 justify-items-center">
+            <div className="mx-auto mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center">
                 {projects.map((project, index) => (
-                    <Card className="w-sm border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 min-h-[370px]" key={index}>
+                    <Card className="w-sm md:w-xs my-3 lg:w-sm border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 min-h-[370px]" key={index}>
                         <CardBody className="overflow-visible">
                             <Image
-                                className="object-cover rounded-xl"
+                                className="rounded-xl "
                                 alt={project.title}
                                 src={project.image}
-                                width="full"
+                                width="100%"
+                                height="280px"
                             />
                         </CardBody>
                         <CardFooter className="pt-2 px-4 pb-4 flex-col items-start">
                             <h3 className="text-lg font-semibold text-gray-900">{project.title}</h3>
-                            <p className="mt-2 text-gray-600">{project.description}</p>
+                            <p className="mt-2 text-gray-600 sm:hidden md:block">{project.description}</p>
 
-                            <h4 className="font-semibold text-large my-2">Frontend Tech</h4>
+                            <h4 className="font-semibold text-large mt-2 sm:hidden md:block">Frontend Tech</h4>
                             {/* Công nghệ sử dụng */}
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 my-2">
                                 {project.tech.map((tech, idx) => (
                                     <span key={idx + index} className="px-3 py-1 text-sm bg-gray-200 rounded-full">
                                         {tech}
@@ -91,7 +92,7 @@ export default function Project() {
                     </Card>
                 ))}
             </div>
-            <div className="md:mx-16 flex flex-row justify-end mt-20">
+            <div className="md:mx-16 flex flex-row justify-end mt-12">
                 <Pagination showControls currentPage={currentPage} totalPages={5} onPageChange={(page) => setCurrentPage(page)} />;
             </div>
         </section>
