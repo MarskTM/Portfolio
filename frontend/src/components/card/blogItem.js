@@ -4,7 +4,7 @@ import { UserCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 export default function BlogCard({ title, description, author, time, category, image, imgeHeight, titleSize }) {
     return (
-        <div className="flex items-start space-x-4 p-4 rounded-lg transition-all duration-500">
+        <div className="flex items-start justify-evenly space-x-4 p-4 rounded-lg transition-all duration-500">
             {/* Hình ảnh */}
             <div className={`w-1/4 min-h-26 flex-shrink-0 rounded-2xl overflow-hidden`}>
                 {image &&
@@ -12,7 +12,7 @@ export default function BlogCard({ title, description, author, time, category, i
                         src={image}
                         alt={title}
                         layout="fill"
-                        height={imgeHeight ? imgeHeight : "100%"}
+                    height={imgeHeight ? imgeHeight : "6.5rem"}
                     />
                 }
             </div>
