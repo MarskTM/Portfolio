@@ -6,7 +6,7 @@ import Pagination from "@components/pagination/page";
 
 const blogs = [
     {
-        title: 'Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) for Your SaaS Product',
+        title: 'Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) for',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip',
         author: 'John Doe',
         time: '10 mins ago',
@@ -49,7 +49,7 @@ const blogs = [
 
 const blogs2 = [
     {
-        title: 'Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) for Your SaaS Product',
+        title: 'Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) SaaS Product',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...',
         author: 'John Doe',
         time: '10 mins ago',
@@ -111,8 +111,8 @@ export default function Blog() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section className="w-full m-auto pb-28 container">
-            <div className="mx-auto text-center">
+        <section className="w-full m-auto pb-28">
+            <div className="container mx-auto text-center">
                 {/* Tiêu đề */}
                 <div className="my-28">
                     <h2 className="text-xl md:text-2xl font-bold text-gray-600 flex items-center justify-center space-x-2">
@@ -127,7 +127,7 @@ export default function Blog() {
 
 
                 {/* Danh sách bài viết */}
-                <div className="flex flex-col lg:flex-row gap-14 mt-6">
+                <div className="flex flex-col xl:flex-row gap-20 mt-6">
                     <div className="flex-2/3 container mx-auto">
 
                         <div className="grid grid-cols-1 gap-4">
@@ -135,12 +135,13 @@ export default function Blog() {
                                 <Link href="/" key={index}>
                                     <BlogCard
                                         title={blog.title}
-                                        titleSize={"text-2xl"}
+                                        titleSize={"text-xl"}
                                         description={blog.description}
                                         author={blog.author}
                                         time={blog.time}
                                         category={blog.category}
                                         image={blog.image}
+                                        imgeHeight={200}
                                     />
                                 </Link>
 
@@ -156,11 +157,10 @@ export default function Blog() {
                     </div>
 
                     {/* Sub menu */}
-                    <div className="flex-1/3 container mx-auto p-4 bg-gray-50 rounded-l-2xl shadow-xl">
-
+                    <div className="flex-1/3 container mx-auto p-4 bg-white/80 rounded-l-2xl shadow-xl">
                         {/* Popular Post */}
                         <div className="flex flex-wrap gap-2 md:hidden lg:block">
-                            <h1 className="text-center text-2xl font-bold my-7">Popular Post</h1>
+                            <h1 className="text-center text-2xl font-bold my-7 text-gray-700">Popular Post</h1>
                             <div className="grid grid-cols-1 grid-rows-3 gap-4 overflow-hidden">
                                 {blogs2.map((blog, index) => (
                                     <Link href="/" key={index}>
@@ -176,8 +176,8 @@ export default function Blog() {
                         </div>
 
                         {/* Categories */}
-                        <h1 className="text-center text-2xl font-bold my-7">Categories</h1>
-                        <div className=" p-4 mx-auto space-y-2">
+                        <h1 className="text-center text-2xl font-bold mt-7 text-gray-700">Categories</h1>
+                        <div className="p-4 mx-auto space-y-2">
                             {categories.map((category) => (
                                 <Link key={category.name} href="/" className="text-base p-2 flex justify-between items-center border-b border-gray-200 hover:bg-gray-200 transition">
                                     <span className="text-gray-700">{category.name}</span>
@@ -187,13 +187,14 @@ export default function Blog() {
                         </div>
 
                         {/* tags */}
-                        <h1 className="text-center text-2xl font-bold mt-7">Tags</h1>
-                        <div className="p-4 mx-auto lg:w-full md:w-3/4">
+                        <h1 className="text-center text-2xl font-bold mt-7 text-gray-700">Tags</h1>
+                        <div className="p-4 mx-auto xl:w-full md:w-1/2">
                             <div className="flex flex-wrap items-center justify-center gap-2">
                                 {tagsData.map((tag, index) => (
                                     <span
                                         key={index}
-                                        className={`py-1 rounded-full font-medium text-green-400/80 hover:text-green-600 hover:scale-3d translate-0.5 ${tag.size}`}
+                                        className={`py-1 rounded-full font-medium text-green-500/80 hover:text-green-600 hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
+                                        onClick={() => alert(`Tag ${tag.name} clicked!`)}
                                     >
                                         {tag.name}
                                     </span>

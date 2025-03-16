@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Banner() {
     return (
-        <section className="w-full flex justify-center my-28">
+        <section className="w-full flex justify-center py-28">
             <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 rounded-lg p-6">
                 {/* Text Section */}
                 <div className="flex-2 lg:mx-28">

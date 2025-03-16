@@ -17,7 +17,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="w-full border-gray-300 ">
+        <header className="w-full ">
             <div className="container mx-auto flex items-center justify-between p-4">
                 {/* Logo */}
                 <Link href="/" className="text-lg font-bold">

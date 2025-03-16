@@ -2,22 +2,23 @@
 import { Image } from "@heroui/react";
 import { UserCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
 
-export default function BlogCard({ title, description, author, time, category, image, titleSize }) {
+export default function BlogCard({ title, description, author, time, category, image, imgeHeight, titleSize }) {
     return (
         <div className="flex items-start space-x-4 p-4 rounded-lg transition-all duration-500">
             {/* Hình ảnh */}
-            <div className="w-1/4 h-max max-h-36 flex-shrink-0 rounded-2xl overflow-hidden">
+            <div className={`w-1/4 min-h-26 flex-shrink-0 rounded-2xl overflow-hidden`}>
                 {image &&
                     <Image
                         src={image}
                         alt={title}
                         layout="fill"
+                        height={imgeHeight ? imgeHeight : "100%"}
                     />
                 }
             </div>
 
             {/* Nội dung */}
-            <div className="flex-1 w-3/4 items-stretch ">
+            <div className="flex-1 w-3/4 ">
                 {/* Danh mục */}
                 {
                     category &&
@@ -29,7 +30,7 @@ export default function BlogCard({ title, description, author, time, category, i
                 }
 
                 {/* Tiêu đề */}
-                <h2 className={`max-w-full h-1/2 text-left font-semibold mt-2 hover:text-blue-500 cursor-pointer overflow-y-hidden truncate ${titleSize ? titleSize : "text-sm"}`}>
+                <h2 className={`max-w-full h-1/2 text-left font-semibold mt-2 text-gray-700 hover:text-blue-500 cursor-pointer overflow-y-hidden text-ellipsis ${titleSize ? titleSize : "text-sm"}`}>
                     {title}
                 </h2>
 
