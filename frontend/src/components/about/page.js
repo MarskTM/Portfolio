@@ -16,9 +16,8 @@ export default function About() {
                     <strong>6 years</strong> of experience. My journey started at an MNC, then I moved to a startup where I had the chance to build some cool projects that taught me a ton.
                 </p>
                 <p className="mt-2 text-gray-700">
-                    I began with JavaScript, built apps using Angular, and then switched to React. Now, I’m working with Next.js, TypeScript, Tailwind, and more.
+                    Hành trình của tôi bắt đầu từ sự tò mò vô tận về thế giới xung quanh. Từ những bước đi chập chững đầu tiên, tôi đã không ngừng học hỏi, khám phá và thử thách bản thân. Những trải nghiệm, cả thành công lẫn thất bại, đã giúp tôi trưởng thành hơn và định hình con người tôi ngày hôm nay. Tôi tin rằng, mỗi chặng đường đều là một bài học quý giá, và tôi luôn sẵn sàng đón nhận những điều mới mẻ phía trước.
                 </p>
-
 
                 <div className="mt-6">
                     <h3 className="font-semibold text-gray-800">Here’s some tech and frameworks I love and work with:</h3>

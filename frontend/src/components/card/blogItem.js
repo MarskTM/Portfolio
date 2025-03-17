@@ -39,8 +39,8 @@ export default function BlogCard({ title, description, author, time, category, i
 
                 {/* Tác giả & Thời gian */}
                 <div className="flex items-center text-gray-500 text-xs mt-3 space-x-2">
-                    <UserCircleIcon className="w-6 h-6" />
-                    <span>{author}</span>
+                    {/* <UserCircleIcon className="w-6 h-6" />
+                    <span>{author}</span> */}
                     <ClockIcon className="w-4 h-4" />
                     <span>{time}</span>
                 </div>

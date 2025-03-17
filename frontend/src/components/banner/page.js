@@ -11,7 +11,7 @@ export default function Banner() {
                 {/* Text Section */}
                 <div className="flex-2 lg:mx-28">
                     <h1 className="text-3xl md:text-4xl font-bold text-gray-900 flex items-center gap-2">
-                        Hi, I’m Sagar <span className="wave text-2xl">👋</span>
+                        Hi, I’m DEV <span className="wave text-2xl">👋</span>
                     </h1>
                     <p className="mt-4 text-gray-700">
                         I’m a full stack developer (<strong>React.js & Node.js</strong>) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive.

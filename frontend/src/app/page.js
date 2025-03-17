@@ -6,18 +6,16 @@ import Experience from "../components/experience/page";
 import Project from "../components/project/page";
 import Blog from "../components/blog/page";
 import Contact from "../components/contact/page";
-import Subscribe from "../components/subscribe/page";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Banner />
       <About />
       <Experience />
       <Project />
       <Blog />
       <Contact />
-      <Subscribe />
     </div>
   );
 }

@@ -111,10 +111,10 @@ export default function Blog() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section className="w-full m-auto pb-28">
+        <section className="w-full m-auto py-28 bg-gray-50">
             <div className="container mx-auto text-center">
                 {/* Tiêu đề */}
-                <div className="my-28">
+                <div className="mb-28">
                     <h2 className="text-xl md:text-2xl font-bold text-gray-600 flex items-center justify-center space-x-2">
                         <span>My Blog</span>
                         {/* <span className="text-gray-500">/ snippets</span> */}
@@ -193,7 +193,7 @@ export default function Blog() {
                                 {tagsData.map((tag, index) => (
                                     <span
                                         key={index}
-                                        className={`py-1 rounded-full font-medium text-green-500/80 hover:text-green-600 hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
+                                        className={`py-1 rounded-full font-medium text-indigo-900/80 hover:text-indigo-950 hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
                                         onClick={() => alert(`Tag ${tag.name} clicked!`)}
                                     >
                                         {tag.name}
