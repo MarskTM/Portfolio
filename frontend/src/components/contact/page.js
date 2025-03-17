@@ -24,7 +24,7 @@ export default function Contact() {
                 </div>
 
 
-                <div className="my-16 w-4/5 h-80 p-7 mx-auto flex flex-row items-center justify-evenly space-x-4 shadow-lg rounded-xl  dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
+                <div className="mt-16 w-4/5 h-80 p-7 mx-auto flex flex-row items-center justify-evenly space-x-4 shadow-lg rounded-xl  dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
                     <div className="">
                         {/* Tiêu đề */}
                         <h2 className="text-xl font-bold text-gray-900 dark:text-white">

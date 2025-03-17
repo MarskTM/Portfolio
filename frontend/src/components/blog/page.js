@@ -115,9 +115,9 @@ export default function Blog() {
             <div className="container mx-auto text-center">
                 {/* Tiêu đề */}
                 <div className="mb-28">
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-600 flex items-center justify-center space-x-2">
-                        <span>My Blog</span>
-                        {/* <span className="text-gray-500">/ snippets</span> */}
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-600">
+                        My Blog
+
                     </h2>
                     <p className="mt-2 text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lectus lacinia, scelerisque mauris ac, lacinia lorem.
