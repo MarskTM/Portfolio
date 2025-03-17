@@ -1,5 +1,6 @@
 import { PhoneIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 export default function Contact() {
     return (
@@ -23,8 +24,8 @@ export default function Contact() {
                 </div>
 
 
-                <div className="my-16 w-5xl h-80 mx-auto flex flex-row items-center justify-between space-x-4 shadow-lg rounded-xl p-6 dark:bg-gray-800">
-                    <div>
+                <div className="my-16 w-4/5 h-80 p-7 mx-auto flex flex-row items-center justify-evenly space-x-4 shadow-lg rounded-xl  dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
+                    <div className="">
                         {/* Tiêu đề */}
                         <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                             Stay up to date!
@@ -49,7 +50,9 @@ export default function Contact() {
                         </div>
                     </div>
 
-
+                    <div className="flex flex-col items-center space-y-4">
+                        <Image src="/images/contact_bg2.jpg" alt="Contact" width={350} height={200} />
+                    </div>
 
                 </div>
             </div>
