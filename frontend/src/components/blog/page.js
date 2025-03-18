@@ -111,7 +111,7 @@ export default function Blog() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section className="w-full m-auto py-28 bg-gray-50">
+        <section className="w-full m-auto py-28">
             <div className="container mx-auto text-center">
                 {/* Tiêu đề */}
                 <div className="mb-28">
@@ -157,10 +157,10 @@ export default function Blog() {
                     </div>
 
                     {/* Sub menu */}
-                    <div className="flex-1/3 container mx-auto p-4 bg-white/80 rounded-l-2xl shadow-xl">
+                    <div className="flex-1/3 container mx-auto p-4 bg-white/80 rounded-l-4xl border-4 border-gray-100 shadow-md">
                         {/* Popular Post */}
                         <div className="flex flex-wrap gap-2 md:hidden lg:block">
-                            <h1 className="text-center text-2xl font-bold my-7 text-gray-700">Popular Post</h1>
+                            <h1 className="text-center text-2xl font-bold mt-7 mb-2  text-gray-700">Popular Post</h1>
                             <div className="grid grid-cols-1 grid-rows-3 gap-4 overflow-hidden">
                                 {blogs2.map((blog, index) => (
                                     <Link href="/" key={index}>
@@ -176,7 +176,7 @@ export default function Blog() {
                         </div>
 
                         {/* Categories */}
-                        <h1 className="text-center text-2xl font-bold mt-7 text-gray-700">Categories</h1>
+                        <h1 className="text-center text-2xl font-bold mt-10 text-gray-700">Categories</h1>
                         <div className="p-4 mx-auto space-y-2">
                             {categories.map((category) => (
                                 <Link key={category.name} href="/" className="text-base p-2 flex justify-between items-center border-b border-gray-200 hover:bg-gray-200 transition">
@@ -187,13 +187,13 @@ export default function Blog() {
                         </div>
 
                         {/* tags */}
-                        <h1 className="text-center text-2xl font-bold mt-7 text-gray-700">Tags</h1>
+                        <h1 className="text-center text-2xl font-bold mt-10 text-gray-700">Tags</h1>
                         <div className="p-4 mx-auto xl:w-full md:w-1/2">
                             <div className="flex flex-wrap items-center justify-center gap-2">
                                 {tagsData.map((tag, index) => (
                                     <span
                                         key={index}
-                                        className={`py-1 rounded-full font-medium text-indigo-900/80 hover:text-indigo-950 hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
+                                        className={`py-1 rounded-full font-medium text-indigo-900/80 hover:text-black hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
                                         onClick={() => alert(`Tag ${tag.name} clicked!`)}
                                     >
                                         {tag.name}

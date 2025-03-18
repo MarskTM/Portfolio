@@ -34,7 +34,7 @@ export default function Project() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section className="w-full my-28 mx-auto container">
+        <section className="container lg:w-7xl my-28 mx-auto ">
             <div className="text-left">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-600 border-b-2 max-w-max">Projects</h2>
                 <p className="mt-2 text-gray-600">

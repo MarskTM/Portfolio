@@ -6,8 +6,8 @@ import { SunIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const navigation = [
-    { name: "Home", href: "#about" },
-    { name: "Experience", href: "#work" },
+    { name: "About", href: "#about" },
+    // { name: "Experience", href: "#work" },
     { name: "Projects", href: "#testimonials" },
     { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
@@ -58,7 +58,7 @@ export default function Header() {
 
             {/* Mobile Navigation Dropdown */}
             {isOpen && (
-                <div className="md:hidden bg-white shadow-md">
+                <div className="md:hidden bg-white shadow-md transform-content translate-y-2">
                     <nav className="flex flex-col items-center space-y-4 p-4">
                         {navigation.map((item) => (
                             <Link

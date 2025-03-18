@@ -12,7 +12,7 @@ export default function Home() {
     <div className="">
       <Banner />
       <About />
-      <Experience />
+      {/* <Experience /> */}
       <Project />
       <Blog />
       <Contact />

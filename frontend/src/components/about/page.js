@@ -5,10 +5,10 @@ import { CodeBracketIcon, PencilIcon } from "@heroicons/react/24/outline";
 export default function About() {
     return (
         <div
-            className="container mx-auto flex items-center justify-between my-28 min-h-96 bg-[url('/images/about_background.svg')] bg-[length:80%] bg-[position:right_center] bg-no-repeat"
+            className="container lg:w-7xl mx-auto flex items-center justify-between mb-28 min-h-96"
         >
-            <div className="p-8 md:p-12 xl:p-14 bg-gray-100 bg-opacity-90 lg:max-w-2xl xl:max-w-4xl  min-h-[500px]">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center">
+            <div className="p-8 md:p-12 xl:p-20 bg-gray-100 bg-opacity-90 min-h-[500px]">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center font-header-blog">
                     A BIT ‘BOUT MY JOURNEY
                 </h2>
                 <p className="mt-4 text-gray-700 leading-relaxed">
@@ -50,10 +50,6 @@ export default function About() {
                 <p className="mt-6 text-gray-700">
                     <span className="font-bold">Fun fact:</span> I've been learning Figma just for fun, mainly to create templates and get a feel for how the tool works. It’s been a great way to boost my creativity!
                 </p>
-            </div>
-
-            <div className="hidden md:block">
-                
             </div>
         </div>
     );
