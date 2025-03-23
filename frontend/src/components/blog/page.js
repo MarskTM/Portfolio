@@ -49,7 +49,7 @@ const blogs = [
 
 const blogs2 = [
     {
-        title: 'Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) SaaS Product',
+        title: 'Creating an Intuitive User Interface (UI) for Your SaaS Product Creating an Intuitive User Interface (UI) SaaS Product Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...',
         author: 'John Doe',
         time: '10 mins ago',
@@ -171,6 +171,7 @@ export default function Blog() {
                                             author={blog.author}
                                             time={blog.time}
                                             image={blog.image}
+                                            category={blog.category}
                                             blogType={'news'}
                                         />
                                     </Link>

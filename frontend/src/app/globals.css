@@ -8,8 +8,6 @@
   --color-mint-500: oklch(0.72 0.11 178);
 }
 
-@import "../../public/assets/font/FiraSans.css";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -30,9 +28,6 @@ body {
 }
 
 @layer utilities {
-  .font-header-blog {
-    font-family: var(--font-playpen-sans);
-  }
 
   .animated-title {
     display: inline;
@@ -48,5 +43,11 @@ body {
 
   .animated-title:hover {
     background-size: 100% calc(1.5em / 3);
+  }
+
+  .vietnam {
+    background-image: url("../../public/icon/vietnam.png");
+    background-size: cover;
+    background-position: center;
   }
 }

@@ -9,7 +9,7 @@ export default function Contact() {
             <div className="container mx-auto flex flex-col space-x-4">
 
                 <div className="flex-shrink-0 flex items-center space-x-2">
-                    <PhoneIcon className="w-10 h-8 text-indigo-900" /><h2 className="text-3xl font-semibold text-gray-600">Contact</h2>
+                    <PhoneIcon className="w-10 h-6 text-indigo-900" /><h2 className="text-3xl font-semibold text-gray-600">Contact</h2>
                 </div>
 
                 {/* Nội dung chính */}

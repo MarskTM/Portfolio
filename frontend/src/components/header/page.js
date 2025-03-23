@@ -32,7 +32,7 @@ export default function Header() {
                             href={item.href}
                             className="text-gray-700 hover:text-black transition"
                         >
-                            {item.name}
+                            <span className="animated-title text-lg font-sans">{item.name}</span>
                         </Link>
                     ))}
                     {/* Light mode toggle */}
@@ -58,7 +58,7 @@ export default function Header() {
 
             {/* Mobile Navigation Dropdown */}
             {isOpen && (
-                <div className="md:hidden bg-white shadow-md transform-content translate-y-2">
+                <div className="md:hidden shadow-md transform-content translate-y-2">
                     <nav className="flex flex-col items-center space-y-4 p-4">
                         {navigation.map((item) => (
                             <Link
@@ -67,7 +67,7 @@ export default function Header() {
                                 className="text-gray-700 hover:text-black transition"
                                 onClick={() => setIsOpen(false)}
                             >
-                                {item.name}
+                                <span className="animated-title">{item.name}</span>
                             </Link>
                         ))}
                         <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition">

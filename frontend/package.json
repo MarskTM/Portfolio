@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
     "@heroicons/react": "^2.2.0",
     "@heroui/pagination": "^2.2.14",
     "@heroui/react": "^2.7.4",

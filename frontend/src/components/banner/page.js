@@ -10,7 +10,7 @@ export default function Banner() {
             {/* Text Section */}
             <div className="w-2/3">
                 <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 flex items-center gap-2">
-                    Howdy, fellow! <span className="wave text-2xl">👋</span>
+                    Well, howdy-do! <span className="wave text-5xl">👋</span>
                 </h1>
                 <p className="mt-4 text-lg text-gray-700 font">
                     I’m To Kim Manh - a passionate Software Engineer in Viet Nam with over 2+ years of experience in job maintaining and developing application servers. My current development direction is focused on working with microservice architecture and researching system optimization techniques.
