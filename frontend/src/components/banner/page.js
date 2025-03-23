@@ -37,7 +37,7 @@ export default function Banner() {
             </div>
 
             {/* Image Section */}
-            <div className="p-3 border-14 border-indigo-500/20 bg-border-indigo-500/20 rounded-2xl">
+            <div className="p-3 rounded-xl">
                 <Image
                     src="/images/avata_banner.jpg" // Thay ảnh phù hợp
                     alt="Avatar Banner"

@@ -35,7 +35,7 @@ const blogs = [
         author: 'Emily White',
         time: '25 mins ago',
         category: 'Node.js',
-        image: '/images/project_img.png', // Đường dẫn tới hình ảnh của bạn
+        image: '/images/gen2.png', // Đường dẫn tới hình ảnh của bạn
     },
     {
         title: 'Building Scalable APIs with Node.js',
@@ -43,7 +43,7 @@ const blogs = [
         author: 'Emily White',
         time: '25 mins ago',
         category: 'Node.js',
-        image: '/images/project_img.png', // Đường dẫn tới hình ảnh của bạn
+        image: '/images/gen3.png', // Đường dẫn tới hình ảnh của bạn
     },
 ];
 
@@ -70,7 +70,7 @@ const blogs2 = [
         author: 'David Lee',
         time: '20 mins ago',
         category: 'Next.js',
-        image: '/images/project_img.png', // Đường dẫn tới hình ảnh của bạn
+        image: '/images/gen3.png', // Đường dẫn tới hình ảnh của bạn
     },
 ];
 
@@ -111,11 +111,11 @@ export default function Blog() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section className="w-full m-auto py-28">
+        <section className="w-full m-auto py-12">
             <div className="container mx-auto text-center">
                 {/* Tiêu đề */}
                 <div className="mb-28">
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-600">
+                    <h2 className="text-xl md:text-3xl font-bold text-gray-600">
                         My Blog
 
                     </h2>
@@ -128,7 +128,7 @@ export default function Blog() {
 
                 {/* Danh sách bài viết */}
                 <div className="flex flex-col xl:flex-row gap-20 mt-6">
-                    <div className="flex-2/3 container mx-auto">
+                    <div className="xl:flex-2/3 container mx-auto">
 
                         <div className="grid grid-cols-1 gap-4">
                             {blogs.map((blog, index) => (
@@ -142,6 +142,7 @@ export default function Blog() {
                                         category={blog.category}
                                         image={blog.image}
                                         imgeHeight={200}
+                                        blogType={'suggest'}
                                     />
                                 </Link>
 
@@ -157,11 +158,12 @@ export default function Blog() {
                     </div>
 
                     {/* Sub menu */}
-                    <div className="flex-1/3 container mx-auto p-4 bg-white/80 rounded-l-4xl border-4 border-gray-100 shadow-md">
+                    <div className="xl:flex-1/3 container mx-auto p-4 bg-white/80  border-gray-100 shadow-lg rounded-lg">
+
                         {/* Popular Post */}
-                        <div className="flex flex-wrap gap-2 md:hidden lg:block">
-                            <h1 className="text-center text-2xl font-bold mt-7 mb-2  text-gray-700">Popular Post</h1>
-                            <div className="grid grid-cols-1 grid-rows-3 gap-4 overflow-hidden">
+                        <div className="m-auto flex flex-wrap gap-2 md:hidden lg:block md:w-full lg:w-2/3 xl:w-full">
+                            <h1 className="text-center text-2xl font-bold mt-7 mb-4  text-gray-700">Popular Post</h1>
+                            <div className="grid grid-cols-1 grid-rows-3 gap-2 overflow-hidden">
                                 {blogs2.map((blog, index) => (
                                     <Link href="/" key={index}>
                                         <BlogCard
@@ -169,6 +171,7 @@ export default function Blog() {
                                             author={blog.author}
                                             time={blog.time}
                                             image={blog.image}
+                                            blogType={'news'}
                                         />
                                     </Link>
                                 ))}
@@ -177,7 +180,7 @@ export default function Blog() {
 
                         {/* Categories */}
                         <h1 className="text-center text-2xl font-bold mt-10 text-gray-700">Categories</h1>
-                        <div className="p-4 mx-auto space-y-2">
+                        <div className="p-4 mx-auto xl:w-full md:w-1/2 space-y-2">
                             {categories.map((category) => (
                                 <Link key={category.name} href="/" className="text-base p-2 flex justify-between items-center border-b border-gray-200 hover:bg-gray-200 transition">
                                     <span className="text-gray-700">{category.name}</span>

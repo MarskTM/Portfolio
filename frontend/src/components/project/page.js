@@ -34,9 +34,9 @@ export default function Project() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section className="container lg:w-7xl my-28 mx-auto ">
-            <div className="text-left">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-600 border-b-2 max-w-max">Projects</h2>
+        <section className="container lg:w-7xl mt-28 mb-16 mx-auto ">
+            <div className="flex flex-col items-center">
+                <h2 className="text-xl md:text-3xl font-bold text-gray-600">Projects</h2>
                 <p className="mt-2 text-gray-600">
                     Check out some of my recent work – cool products I've been part of, built using the latest tech and libraries
                     to create something awesome!
@@ -45,7 +45,7 @@ export default function Project() {
 
             <div className="mx-auto mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center">
                 {projects.map((project, index) => (
-                    <Card className="w-sm md:w-xs my-3 lg:w-sm border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 min-h-[370px]" key={index}>
+                    <Card className="w-sm md:w-xs my-3 lg:w-sm border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 min-h-[370px]" key={index}>
                         <CardBody className="overflow-visible">
                             <Image
                                 className="rounded-xl"
@@ -92,7 +92,7 @@ export default function Project() {
                     </Card>
                 ))}
             </div>
-            <div className="md:mx-16 flex flex-row justify-end mt-12">
+            <div className="md:mx-16 flex flex-row justify-end mt-4">
                 <Pagination showControls currentPage={currentPage} totalPages={5} onPageChange={(page) => setCurrentPage(page)} />
             </div>
         </section>

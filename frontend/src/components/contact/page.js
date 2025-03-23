@@ -4,15 +4,16 @@ import Image from "next/image";
 
 export default function Contact() {
     return (
-        <section className="py-28 text-gray-300 p-6 m-auto flex items-center space-x-4">
+        <section className="lg:w-7xl py-28 text-gray-300 p-6 m-auto flex items-center space-x-4">
+
             <div className="container mx-auto flex flex-col space-x-4">
-                {/* Icon bên trái */}
+
                 <div className="flex-shrink-0 flex items-center space-x-2">
-                    <PhoneIcon className="w-12 h-8 text-indigo-900" /><h2 className="text-4xl font-semibold text-gray-600">Contact</h2>
+                    <PhoneIcon className="w-10 h-8 text-indigo-900" /><h2 className="text-3xl font-semibold text-gray-600">Contact</h2>
                 </div>
 
                 {/* Nội dung chính */}
-                <div>
+                <div className="mt-2">
                     <p className="text-sm">
                         consectetur adipiscing elit. Praesent imperdiet ante tortor, sit amet
                         mollis erat placerat suscipit.{" "}
@@ -22,6 +23,8 @@ export default function Contact() {
                         Donec quis odio at augue imperdiet posuere. Sed ullamcorper hendrerit auctor.
                     </p>
                 </div>
+
+
 
 
                 <div className="mt-16 w-4/5 h-80 p-7 mx-auto flex flex-row items-center justify-evenly space-x-4 shadow-lg rounded-xl  dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
