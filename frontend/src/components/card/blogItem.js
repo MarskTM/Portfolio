@@ -7,7 +7,7 @@ export default function BlogCard({ title, description, author, time, category, i
     let blogStyle = getInfoByBlogType(blogType);
 
     return (
-        <div className="flex flex-row items-start justify-evenly space-x-8 p-4 rounded-lg transition-all duration-500 animated-container">
+        <div className="flex flex-row items-start justify-evenly space-x-3 p-4 rounded-lg transition-all duration-500 animated-container">
 
             {/* Hình ảnh */}
             <div className={clsx(
@@ -52,17 +52,21 @@ export default function BlogCard({ title, description, author, time, category, i
                 }
 
                 {/* Mô tả */}
-                <p className="max-w-full text-gray-600 text-base text-left mt-1 line-clamp-3 overflow-y-hidden text-ellipsis">{description}</p>
+                {
+                    description &&
+                    <p className="max-w-full text-gray-600 text-base text-left mt-1 mb-2 line-clamp-3 overflow-y-hidden text-ellipsis">{description}</p>
+                }
+
 
                 {/* Tác giả & Thời gian */}
-                <div className="flex items-center text-gray-500 text-xs mt-3 space-x-2">
+                <div className="flex items-center text-gray-500 text-xs space-x-2">
                     {/* <UserCircleIcon className="w-6 h-6" />
                     <span>{author}</span> */}
                     <ClockIcon className="w-4 h-4" />
                     <span>{time}</span>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
@@ -71,16 +75,16 @@ function getInfoByBlogType(blogType) {
     switch (blogType) {
         case "suggest":
             return {
-                container: "w-48 h-52 border-3 border-gray-500",
-                image: "w-48 h-52 shadow-xl rounded-2xl",
-                titleFont: "h-28  text-lg animated-title",
-                postition: "absolute -top-4 -left-4 z-10 p-0 m-0",
-                animation: "hover:translate-3  hover:blur-sm duration-400",
+                container: "w-32 h-40 border-2 border-gray-500",
+                image: "w-32 h-40 shadow-xl rounded-2xl",
+                titleFont: "h-28 text-base animated-title",
+                postition: "absolute -top-3 -left-3 z-10 p-0 m-0",
+                animation: "hover:translate-3  hover:blur-sm duration-300",
             };
         case "news":
             return {
-                image: "w-28 h-24 rounded-md",
-                titleFont: "text-sm line-clamp-2 overflow-y-hidden text-ellipsis hover:text-blue-500 duration-400",
+                image: "w-16 h-16 rounded-md",
+                titleFont: "text-xs line-clamp-2 overflow-y-hidden text-ellipsis hover:text-blue-500 duration-300",
             };
         default:
             return {

@@ -17,8 +17,8 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="w-full ">
-            <div className="container mx-auto flex items-center justify-between p-4">
+        <header className="w-full container mx-auto">
+            <div className="mx-auto xl:w-5xl flex items-center justify-between mt-4 rounded-2xl">
                 {/* Logo */}
                 <Link href="/" className="text-lg font-bold">
                     <span className="text-gray-800">{`<tm />`}</span>
@@ -32,7 +32,7 @@ export default function Header() {
                             href={item.href}
                             className="text-gray-700 hover:text-black transition"
                         >
-                            <span className="animated-title text-lg font-sans">{item.name}</span>
+                            <span className="animated-title text-sm font-sans">{item.name}</span>
                         </Link>
                     ))}
                     {/* Light mode toggle */}
@@ -42,7 +42,7 @@ export default function Header() {
                     {/* Blog button */}
                     <Link
                         href="/blog"
-                        className="px-4 py-2 text-white bg-black rounded-full hover:bg-gray-800 transition"
+                        className="px-4 py-1 text-sm text-white bg-black rounded-full hover:bg-gray-800 transition"
                     >
                         Download CV
                     </Link>

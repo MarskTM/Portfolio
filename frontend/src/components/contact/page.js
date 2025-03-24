@@ -4,12 +4,10 @@ import Image from "next/image";
 
 export default function Contact() {
     return (
-        <section className="lg:w-7xl py-28 text-gray-300 p-6 m-auto flex items-center space-x-4">
-
+        <section className="container lg:w-5xl my-28 m-auto space-x-4 text-gray-300">
             <div className="container mx-auto flex flex-col space-x-4">
-
                 <div className="flex-shrink-0 flex items-center space-x-2">
-                    <PhoneIcon className="w-10 h-6 text-indigo-900" /><h2 className="text-3xl font-semibold text-gray-600">Contact</h2>
+                    <PhoneIcon className="w-10 h-6 text-indigo-900" /><h2 className="text-2xl font-semibold text-gray-600">Contact</h2>
                 </div>
 
                 {/* Nội dung chính */}
@@ -24,11 +22,8 @@ export default function Contact() {
                     </p>
                 </div>
 
-
-
-
-                <div className="mt-16 w-4/5 h-80 p-7 mx-auto flex flex-row items-center justify-evenly space-x-4 shadow-lg rounded-xl  dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
-                    <div className="">
+                <div className="self-end w-5/6 mt-16 h-60 p-7 flex flex-row items-center justify-between space-x-4 shadow-lg rounded-xl dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
+                    <div>
                         {/* Tiêu đề */}
                         <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                             Stay up to date!
@@ -44,7 +39,7 @@ export default function Contact() {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                                    className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
                                 />
                             </div>
                             <button className="ml-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">

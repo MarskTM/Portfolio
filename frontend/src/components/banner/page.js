@@ -6,13 +6,13 @@ import Image from "next/image";
 
 export default function Banner() {
     return (
-        <section className="container lg:w-7xl py-28 m-auto flex flex-col md:flex-row items-center gap-10 justify-between rounded-lg">
+        <section className="container lg:w-5xl py-28 m-auto flex flex-col md:flex-row items-center gap-10 justify-between rounded-lg">
             {/* Text Section */}
             <div className="w-2/3">
-                <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 flex items-center gap-2">
+                <h1 className="text-2xl md:text-5xl font-extrabold tracking-tight text-gray-900 flex items-center gap-2">
                     Well, howdy-do! <span className="wave text-5xl">👋</span>
                 </h1>
-                <p className="mt-4 text-lg text-gray-700 font">
+                <p className="mt-4 text-sm text-gray-700 font">
                     I’m To Kim Manh - a passionate Software Engineer in Viet Nam with over 2+ years of experience in job maintaining and developing application servers. My current development direction is focused on working with microservice architecture and researching system optimization techniques.
                 </p>
 
@@ -41,8 +41,8 @@ export default function Banner() {
                 <Image
                     src="/images/avata_banner.jpg" // Thay ảnh phù hợp
                     alt="Avatar Banner"
-                    width={240}
-                    height={250}
+                    width={180}
+                    height={200}
                     className="rounded-lg shadow-md"
                 />
             </div>

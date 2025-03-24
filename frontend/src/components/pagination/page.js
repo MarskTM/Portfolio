@@ -24,7 +24,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
                     key={page}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className={`text-lg px-3 py-1 rounded-lg transition-all duration-600 ${currentPage === page
+                    className={`text-sm px-3 py-1 rounded-lg transition-all duration-600 ${currentPage === page
                             ? "bg-blue-500 text-white shadow-lg"
                             : "hover:bg-gray-200 dark:hover:bg-gray-700"
                         }`}
