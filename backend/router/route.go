@@ -38,6 +38,8 @@ func Router() http.Handler {
 		router.Get("/ping", func(w http.ResponseWriter, r *http.Request) {
 			w.Write([]byte("pong"))
 		})
+
+		
 	})
 
 	return r

@@ -43,7 +43,7 @@ var (
 	encodeAuth *jwtauth.JWTAuth
 	decodeAuth *jwtauth.JWTAuth
 	privateKey *rsa.PrivateKey
-	publicKey  interface{}
+	publicKey  string
 
 	redisURL    string
 	redisClient *redis.Client
