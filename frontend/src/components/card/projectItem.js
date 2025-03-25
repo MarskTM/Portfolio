@@ -6,9 +6,8 @@ export default function ProjectCard() {
         <div className={clsx(
             "w-xl lg:w-md h-68 p-6 my-1 m-auto",
             "bg-white shadow-md rounded-2xl border border-gray-100",
-            "hover:shadow-lg transition-shadow",
-            "group-hover:shadow-2xl",
-            "group-focus:outline-none",
+            "hover:shadow-lg transition-shadow duration-300",
+            "transition-transform duration-400 ease-in-out",
         )}>
             {/* Header */}
             <div className="flex items-center space-x-4 mb-4">

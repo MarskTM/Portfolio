@@ -94,11 +94,14 @@ const tagsData = [
 
 export default function Blog() {
     return (
-        <section className="w-full container m-auto py-12">
+        <section
+            id="blogs"
+            className="w-full container m-auto pt-24 pb-10"
+        >
             <div className="lg:w-5xl mx-auto text-center">
                 {/* Tiêu đề */}
                 <div className="mb-14">
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-600">
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-700 drop-shadow-sm">
                         My Blog
                     </h2>
                     <p className="mt-2 text-gray-600">

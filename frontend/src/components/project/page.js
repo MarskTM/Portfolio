@@ -35,9 +35,9 @@ export default function Project() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section id="about" className="container lg:w-5xl mt-28 mb-16 mx-auto ">
+        <section id="projects" className="container lg:w-5xl pt-24 pb-10 mx-auto ">
             <div className="flex flex-col items-center">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-600">Projects</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-700 drop-shadow-sm">Projects</h2>
                 <p className="mt-2 text-gray-600">
                     Check out some of my recent work – cool products I've been part of, built using the latest tech and libraries
                     to create something awesome!
@@ -46,7 +46,7 @@ export default function Project() {
 
             <div className="mx-auto mt-10 flex flex-wrap gap-4 justify-items-center">
                 {projects.map((project, index) => (
-                    <ProjectCard />
+                    <ProjectCard key={index} />
                 ))}
             </div>
             <div className="md:mx-16 flex flex-row justify-end mt-4">

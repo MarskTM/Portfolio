@@ -1,58 +1,105 @@
-"use client";
+'use client';
 
-import StepList, { steps } from "@components/card/stepItem";
+import Image from 'next/image';
+import clsx from 'clsx'
 
 export default function About() {
     return (
         <div
-            className="container lg:w-5xl mx-auto flex items-center justify-between mb-28 min-h-96"
+            id="about"
+            className="container lg:w-5xl mx-auto flex items-center justify-between pt-28 pb-10"
         >
-            <div className="p-8 md:p-12 xl:p-20 bg-gray-100 bg-opacity-90 min-h-[500px]">
-                <h2 className="text-lg md:text-xl font-bold text-gray-900 text-center font-header-blog">
-                    A BIT ‘BOUT MY JOURNEY
-                </h2>
+            <div className={clsx(
+                "bg-white py-16",
+                "grid grid-cols-4 grid-rows-[auto,1fr,1fr] gap-10"
+            )} >
 
-                <StepList initialSteps={steps} />
+                {/* Section Title */}
+                <div className={clsx(
+                    "row-start-1 col-start-2 col-span-3 row-span-1"
+                )}>
+                    <p className="text-sm font-semibold text-indigo-600 mb-2">About us</p>
+                    <h2 className="text-2xl font-bold tracking-tight text-gray-700 drop-shadow-sm">
+                        A bit about my journey
+                    </h2>
+                    <p className="mt-4 text-base text-gray-600 max-w-3xl">
+                        Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
+                    </p>
+                </div>
 
-                <p className="mt-4 text-sm text-gray-700 leading-relaxed">
-                    I'm a freelance frontend developer based in Ahmedabad, India, with almost{" "}
-                    <strong>6 years</strong> of experience. My journey started at an MNC, then I moved to a startup where I had the chance to build some cool projects that taught me a ton.
-                </p>
-                <p className="mt-2 text-sm text-gray-700">
-                    Hành trình của tôi bắt đầu từ sự tò mò vô tận về thế giới xung quanh. Từ những bước đi chập chững đầu tiên, tôi đã không ngừng học hỏi, khám phá và thử thách bản thân. Những trải nghiệm, cả thành công lẫn thất bại, đã giúp tôi trưởng thành hơn và định hình con người tôi ngày hôm nay. Tôi tin rằng, mỗi chặng đường đều là một bài học quý giá, và tôi luôn sẵn sàng đón nhận những điều mới mẻ phía trước.
-                </p>
+                {/* Mission Text */}
+                <div className={clsx(
+                    "row-start-2 col-start-3 col-span-2 row-span-2",
+                )} >
 
-                <div className="mt-6">
-                    <h3 className="font-semibold text-gray-800">Here’s some tech and frameworks I love and work with:</h3>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                        {[
-                            "JavaScript",
-                            "TypeScript",
-                            "React",
-                            "Next.js",
-                            "Sass",
-                            "TailwindCSS",
-                            "Node.js",
-                            "Express",
-                            "Figma",
-                            "Storybook",
-                            "Cypress",
-                            "Jest",
-                        ].map((tech, index) => (
-                            <span
-                                key={index}
-                                className="px-3 py-1 text-sm font-medium bg-gray-200 text-gray-800 rounded-md"
-                            >
-                                {tech}
-                            </span>
-                        ))}
+                    <h3 className="text-lg font-semibold text-gray-700 mb-4">My Carrer</h3>
+                    <p className="text-gray-700 mb-4 text-base">
+                        Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+                    </p>
+                    <p className="text-gray-700 text-base">
+                        Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                    </p>
+
+                    <h3 className="text-lg font-semibold text-gray-700 border-b-1 border-b-gray-300 mt-6 mb-6 pb-2">Tech and frameworks</h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                        <div>
+                            <p className="text-3xl font-bold text-gray-900">$150M</p>
+                            <p className="mt-1 text-sm text-gray-500">Raised</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-gray-900">30K</p>
+                            <p className="mt-1 text-sm text-gray-500">Companies</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-gray-900">1.5M</p>
+                            <p className="mt-1 text-sm text-gray-500">Deals Closed</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-gray-900">200M</p>
+                            <p className="mt-1 text-sm text-gray-500">Leads Generated</p>
+                        </div>
                     </div>
                 </div>
 
+                {/* Image grid */}
+                <div className={clsx(
+                    "row-start-2 col-start-1 col-span-2 row-span-2",
+                    "lg:grid grid-cols-2 gap-8"
+                )}>
+                    <div className="space-y-4 -translate-y-24">
+                        <Image
+                            src="/images/vccorp_logo.png"
+                            alt="Working together"
+                            width={600}
+                            height={650}
+                            className="w-full rounded-xl shadow-lg object-cover"
+                        />
+                        <Image
+                            src="/images/about2.jpg"
+                            alt="Team meeting"
+                            width={600}
+                            height={650}
+                            className="w-full rounded-xl shadow-lg object-cover"
+                        />
+                    </div>
+                    <div className="space-y-4">
+                        <Image
+                            src="/images/phenikaa_logo.png"
+                            alt="Office work"
+                            width={600}
+                            height={650}
+                            className="w-full rounded-xl shadow-lg object-cover"
+                        />
+                        <Image
+                            src="/images/about4.jpg"
+                            alt="Remote call"
+                            width={600}
+                            height={650}
+                            className="w-full rounded-xl shadow-lg object-cover"
+                        />
+                    </div>
+                </div>
 
-                <p className="mt-6 text-sm text-gray-700">
-                    <span className="font-bold">Fun fact:</span> I've been learning Figma just for fun, mainly to create templates and get a feel for how the tool works. It’s been a great way to boost my creativity!
-                </p>
             </div>
         </div>
     );

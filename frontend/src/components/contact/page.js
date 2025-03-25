@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Contact() {
     return (
-        <section className="container lg:w-5xl my-28 m-auto space-x-4 text-gray-300">
+        <section id="contact" className="container lg:w-5xl my-28 m-auto space-x-4 text-gray-300">
             <div className="container mx-auto flex flex-col space-x-4">
                 <div className="flex-shrink-0 flex items-center space-x-2">
-                    <PhoneIcon className="w-10 h-6 text-indigo-900" /><h2 className="text-2xl font-semibold text-gray-600">Contact</h2>
+                    <PhoneIcon className="w-10 h-6 text-indigo-900" /><h2 className="text-2xl font-semibold text-gray-700 drop-shadow-sm">Contact</h2>
                 </div>
 
                 {/* Nội dung chính */}
