@@ -7,11 +7,15 @@ export default function BlogCard({ title, description, author, time, category, i
     let blogStyle = getInfoByBlogType(blogType);
 
     return (
-        <div className="flex flex-row items-start justify-evenly space-x-3 p-4 rounded-lg transition-all duration-500 animated-container">
+        <div className={clsx(
+            blogStyle.containerV1,
+            "flex flex-row items-start justify-evenly",
+            "rounded-lg transition-all duration-500 animated-container"
+        )}>
 
             {/* Hình ảnh */}
             <div className={clsx(
-                blogStyle.container,
+                blogStyle.containerV2,
                 `flex-shrink-0 rounded-2xl relative z-0`)}>
                 <div className={clsx(
                     blogStyle.postition,
@@ -75,7 +79,8 @@ function getInfoByBlogType(blogType) {
     switch (blogType) {
         case "suggest":
             return {
-                container: "w-32 h-40 border-2 border-gray-500",
+                containerV1: "space-x-3 px-2 py-3",
+                containerV2: "w-32 h-40 border-2 border-gray-500",
                 image: "w-32 h-40 shadow-xl rounded-2xl",
                 titleFont: "h-28 text-base animated-title",
                 postition: "absolute -top-3 -left-3 z-10 p-0 m-0",
@@ -83,6 +88,7 @@ function getInfoByBlogType(blogType) {
             };
         case "news":
             return {
+                containerV1: "space-x-3 p-1",
                 image: "w-16 h-16 rounded-md",
                 titleFont: "text-xs line-clamp-2 overflow-y-hidden text-ellipsis hover:text-blue-500 duration-300",
             };

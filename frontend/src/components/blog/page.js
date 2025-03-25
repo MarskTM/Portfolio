@@ -141,7 +141,7 @@ export default function Blog() {
                     <div className="xl:flex-1/3 container mx-auto p-4 bg-white/80  border-gray-100 shadow-lg rounded-lg">
 
                         {/* Popular Post */}
-                        <div className="m-auto flex flex-wrap gap-2 md:hidden lg:block md:w-full lg:w-2/3 xl:w-full">
+                        <div className="m-auto flex flex-wrap gap-2 md:hidden lg:block md:w-full lg:w-1/2 xl:w-full">
                             <h1 className="text-center text-lg font-bold mt-7 mb-2 text-gray-700">Popular Post</h1>
                             <div className="grid grid-cols-1 grid-rows-2 gap-2 overflow-hidden">
                                 {blogs2.map((blog, index) => (

@@ -1,6 +1,6 @@
 "use client";
 
-import { CodeBracketIcon, PencilIcon } from "@heroicons/react/24/outline";
+import StepList, { steps } from "@components/card/stepItem";
 
 export default function About() {
     return (
@@ -11,6 +11,9 @@ export default function About() {
                 <h2 className="text-lg md:text-xl font-bold text-gray-900 text-center font-header-blog">
                     A BIT ‘BOUT MY JOURNEY
                 </h2>
+
+                <StepList initialSteps={steps} />
+
                 <p className="mt-4 text-sm text-gray-700 leading-relaxed">
                     I'm a freelance frontend developer based in Ahmedabad, India, with almost{" "}
                     <strong>6 years</strong> of experience. My journey started at an MNC, then I moved to a startup where I had the chance to build some cool projects that taught me a ton.
