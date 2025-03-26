@@ -59,7 +59,7 @@ export default function Footer() {
                 {/* Cột 2: Danh mục liên kết */}
                 <div className="mt-5 lg:mr-5 grid grid-cols-2 justify-items-center gap-8 lg:gap-14">
                     <div>
-                        <h3 className="font-semibold text-sn">Sitemap</h3>
+                        <h3 className="font-semibold text-base">Sitemap</h3>
                         <ul className="mt-4 space-y-2.5 text-sm flex flex-col">
                             <li className='animated-title'>About Me</li>
                             <li className='animated-title'>Projects</li>
@@ -68,7 +68,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-semibold text-sm">Personal stuff</h3>
+                        <h3 className="font-semibold text-base">Personal stuff</h3>
                         <ul className="mt-4 space-y-2.5 text-sm flex flex-col">
                             <li className='animated-title'>Resume</li>
                             <li className='animated-title'>Books</li>
@@ -76,8 +76,6 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-
-
             </div>
         </footer>
     );

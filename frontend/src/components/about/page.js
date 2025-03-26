@@ -1,6 +1,6 @@
 'use client';
 
-import {Image} from "@heroui/react";
+import { Image } from "@heroui/react";
 import clsx from 'clsx'
 
 export default function About() {
@@ -26,8 +26,10 @@ export default function About() {
                     <h2 className="text-2xl font-bold tracking-tight text-gray-700 drop-shadow-sm">
                         A bit about my journey
                     </h2>
-                    <p className="mt-4 text-base text-gray-600 max-w-3xl">
-                        Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam.
+                    <p className="mt-4 text-lg text-gray-600 max-w-3xl">
+                        My journey started in 2020, and I’m just getting started. I believe great products are built by great teams — and I’d love to be part of one.
+
+                        {/* My current development direction is focused on working with microservice architecture and researching system optimization techniques. */}
                     </p>
                 </div>
 
@@ -44,7 +46,7 @@ export default function About() {
                         Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
                     </p>
 
-                    <h3 className="w-max text-lg font-semibold text-gray-700 border-b-1 border-b-gray-300 mt-6 mb-4 pb-1">Tech Stack</h3>
+                    <h3 className="w-max text-lg font-semibold text-gray-700 mt-10 mb-4">Tech Stack</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                         <div>
                             <p className="text-3xl font-bold text-gray-900">$150M</p>
@@ -86,7 +88,7 @@ export default function About() {
                             className="w-full rounded-xl shadow-lg object-cover"
                         />
                     </div>
-                    <div className="space-y-6">
+                    <div className="space-y-6 -translate-x-2">
                         <Image
                             src="/images/gen2.png"
                             alt="Office work"

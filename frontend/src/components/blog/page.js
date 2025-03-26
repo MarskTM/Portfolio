@@ -104,7 +104,7 @@ export default function Blog() {
                     <h2 className="text-xl md:text-2xl font-bold text-gray-700 drop-shadow-sm">
                         My Blog
                     </h2>
-                    <p className="mt-2 text-gray-600">
+                    <p className="mt-2 text-lg text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lectus lacinia, scelerisque mauris ac, lacinia lorem.
                     </p>
                 </div>

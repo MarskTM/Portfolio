@@ -84,7 +84,7 @@ function getInfoByBlogType(blogType) {
                 image: "w-32 h-40 shadow-xl rounded-2xl",
                 titleFont: "h-28 text-base animated-title",
                 postition: "absolute -top-3 -left-3 z-10 p-0 m-0",
-                animation: "hover:translate-3  hover:blur-sm duration-300",
+                animation: "hover:translate-2  hover:blur-sm duration-300",
             };
         case "news":
             return {
