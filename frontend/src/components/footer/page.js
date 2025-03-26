@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="xl:w-5xl m-auto flex flex-row items-start justify-between gap-2">
                 {/* Cột 1: Logo & Policy */}
                 <div className="">
-                    <h2 className="text-base font-bold">K.Manh's Portfolio</h2>
+                    <h2 className="text-xl font-bold text-gray-700 drop-shadow-sm">K.Manh's Portfolio</h2>
                     <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
                         Be sure to take a look at our Terms of Use and Privacy Policy.
                     </p>

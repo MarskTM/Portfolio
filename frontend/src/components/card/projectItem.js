@@ -4,10 +4,10 @@ import clsx from 'clsx'
 export default function ProjectCard() {
     return (
         <div className={clsx(
-            "w-xl lg:w-md h-68 p-6 my-1 m-auto",
+            "w-xl lg:w-md h-60 p-6 my-1 m-auto",
             "bg-white shadow-md rounded-2xl border border-gray-100",
-            "hover:shadow-lg transition-shadow duration-300",
-            "transition-transform duration-400 ease-in-out",
+            "hover:shadow-xl hover:shadow-blue-300/10 transition-shadow",
+            "duration-300 ease-linear",
         )}>
             {/* Header */}
             <div className="flex items-center space-x-4 mb-4">

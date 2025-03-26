@@ -2,17 +2,35 @@
 
 import { MapPinIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import clsx from 'clsx'
+import { Agbalumo, Fredoka } from 'next/font/google'
 
+const agbalumo = Agbalumo({
+    weight: '400',
+    subsets: ['latin'],
+})
+
+const fredoka = Fredoka({
+    weight: '400',
+    subsets: ['latin'],
+})
 
 export default function Banner() {
     return (
-        <section className="container lg:w-5xl pt-28 m-auto flex flex-col md:flex-row items-center gap-10 justify-between rounded-lg">
+        <section className="container lg:w-5xl pt-28 pb-12 m-auto flex flex-col md:flex-row items-center gap-10 justify-between rounded-lg">
             {/* Text Section */}
             <div className="w-2/3">
-                <h1 className="text-2xl md:text-5xl font-extrabold tracking-tight text-gray-900 flex items-center gap-2">
+                <h1 className={clsx(
+                    "text-2xl md:text-5xl font-extrabold tracking-tight text-gray-900 drop-shadow-md",
+                    "flex items-center gap-2",
+                    agbalumo.className
+                )}>
                     Well, howdy-do! <span className="wave text-5xl">👋</span>
                 </h1>
-                <p className="mt-4 text-sm text-gray-700 font">
+                <p className={clsx(
+                    "mt-4 text-base text-gray-700",
+                    fredoka.className
+                )}>
                     I’m To Kim Manh - a passionate Software Engineer in Viet Nam with over 2+ years of experience in job maintaining and developing application servers. My current development direction is focused on working with microservice architecture and researching system optimization techniques.
                 </p>
 

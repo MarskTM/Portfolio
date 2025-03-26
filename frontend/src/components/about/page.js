@@ -1,17 +1,21 @@
 'use client';
 
-import Image from 'next/image';
+import {Image} from "@heroui/react";
 import clsx from 'clsx'
 
 export default function About() {
     return (
         <div
             id="about"
-            className="container lg:w-5xl mx-auto flex items-center justify-between pt-28 pb-10"
+            className={clsx(
+                "container lg:w-5xl mx-auto",
+                "pt-16 pb-10",
+                "flex items-center justify-between"
+            )}
         >
             <div className={clsx(
                 "bg-white py-16",
-                "grid grid-cols-4 grid-rows-[auto,1fr,1fr] gap-10"
+                "grid grid-cols-4 grid-rows-[auto,1fr,1fr] gap-y-10 gap-x-2"
             )} >
 
                 {/* Section Title */}
@@ -40,7 +44,7 @@ export default function About() {
                         Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
                     </p>
 
-                    <h3 className="text-lg font-semibold text-gray-700 border-b-1 border-b-gray-300 mt-6 mb-6 pb-2">Tech and frameworks</h3>
+                    <h3 className="w-max text-lg font-semibold text-gray-700 border-b-1 border-b-gray-300 mt-6 mb-4 pb-1">Tech Stack</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                         <div>
                             <p className="text-3xl font-bold text-gray-900">$150M</p>
@@ -64,42 +68,41 @@ export default function About() {
                 {/* Image grid */}
                 <div className={clsx(
                     "row-start-2 col-start-1 col-span-2 row-span-2",
-                    "lg:grid grid-cols-2 gap-8"
+                    "lg:grid grid-cols-2 gap-x-3"
                 )}>
-                    <div className="space-y-4 -translate-y-24">
+                    <div className="space-y-5 -translate-y-20">
                         <Image
-                            src="/images/vccorp_logo.png"
+                            src="/images/gen3.png"
                             alt="Working together"
-                            width={600}
-                            height={650}
+                            width={210}
+                            height={260}
                             className="w-full rounded-xl shadow-lg object-cover"
                         />
                         <Image
-                            src="/images/about2.jpg"
+                            src="/images/gen2.png"
                             alt="Team meeting"
-                            width={600}
-                            height={650}
+                            width={210}
+                            height={260}
                             className="w-full rounded-xl shadow-lg object-cover"
                         />
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         <Image
-                            src="/images/phenikaa_logo.png"
+                            src="/images/gen2.png"
                             alt="Office work"
-                            width={600}
-                            height={650}
+                            width={210}
+                            height={260}
                             className="w-full rounded-xl shadow-lg object-cover"
                         />
                         <Image
-                            src="/images/about4.jpg"
+                            src="/images/gen3.png"
                             alt="Remote call"
-                            width={600}
-                            height={650}
+                            width={210}
+                            height={260}
                             className="w-full rounded-xl shadow-lg object-cover"
                         />
                     </div>
                 </div>
-
             </div>
         </div>
     );
