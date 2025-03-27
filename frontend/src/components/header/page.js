@@ -32,7 +32,7 @@ export default function Header() {
                             href={item.href}
                             className="text-gray-700 hover:text-black transition"
                         >
-                            <span className="animated-title text-lg font-sans">{item.name}</span>
+                            <span className="animated-title text-base font-sans">{item.name}</span>
                         </Link>
                     ))}
                     {/* Light mode toggle */}
