@@ -1,10 +1,14 @@
 import { PhoneIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import { Image } from "@heroui/react";
+import clsx from 'clsx'
 
 export default function Contact() {
     return (
-        <section id="contact" className="container lg:w-5xl my-28 m-auto space-x-4 text-gray-300">
+        <section id="contact" className={clsx(
+            "container lg:w-5xl my-28 m-auto space-x-4 text-gray-300",
+            "max-sm:px-4"
+        )}>
             <div className="container mx-auto flex flex-col space-x-4">
                 <div className="flex-shrink-0 flex items-center space-x-2">
                     <PhoneIcon className="w-10 h-6 text-indigo-900" /><h2 className="text-2xl font-semibold text-gray-700 drop-shadow-sm">Contact</h2>
@@ -22,7 +26,12 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="self-end w-5/6 mt-16 h-60 p-7 flex flex-row items-center justify-between space-x-4 shadow-lg rounded-xl dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center">
+                <div className={clsx(
+                    "md:self-end self-auto",
+                    "md:w-5/6 mt-16 h-60 p-7",
+                    "flex flex-row items-center justify-between space-x-4",
+                    "shadow-lg rounded-xl dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center",
+                )}>
                     <div>
                         {/* Tiêu đề */}
                         <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -49,7 +58,7 @@ export default function Contact() {
                     </div>
 
                     <div className="flex flex-col items-center space-y-4">
-                        <Image src="/images/contact_bg2.jpg" alt="Contact" width={350} height={200} />
+                        <Image src="/images/contact_bg2.jpg" alt="Contact" className="w-60" />
                     </div>
 
                 </div>

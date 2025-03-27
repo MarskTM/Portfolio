@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
 import { BlogCard } from "@components/card";
+import clsx from 'clsx'
 
 const blogs = [
     {
@@ -113,7 +114,7 @@ export default function Blog() {
 
                 {/* Danh sách bài viết */}
                 <div className="flex flex-col xl:flex-row gap-10 mt-6">
-                    <div className="xl:flex-2/3 container mx-auto">
+                    <div className="max-sm:px-4 xl:flex-2/3 container mx-auto">
                         <div className="flex items-center justify-between mt-10">
                             <h1 className="text-left text-xl text-gray-600 font-bold mb-4">Keep Reading</h1>
                             <Link href="/" className="text-vase font-bold flex flex-row justify-center items-center">
@@ -141,56 +142,60 @@ export default function Blog() {
                     </div>
 
                     {/* Sub menu */}
-                    <div className="xl:flex-1/3 container mx-auto p-4 bg-white/80  border-gray-100 shadow-lg rounded-lg">
+                    <div className={clsx(
+                        "container xl:flex-1/3 mx-auto p-4 bg-white/80",
+                        "border-gray-100 shadow-lg rounded-lg",
+                        "max-sm:shadow-none"
+                    )}>
 
-                        {/* Popular Post */}
-                        <div className="m-auto flex flex-wrap gap-2 md:hidden lg:block md:w-full lg:w-1/2 xl:w-full">
-                            <h1 className="text-center text-lg font-bold mt-7 mb-2 text-gray-700">Popular Post</h1>
-                            <div className="grid grid-cols-1 grid-rows-2 gap-2 overflow-hidden">
-                                {blogs2.map((blog, index) => (
-                                    <Link href="/" key={index}>
-                                        <BlogCard
-                                            title={blog.title}
-                                            author={blog.author}
-                                            time={blog.time}
-                                            image={blog.image}
-                                            // category={blog.category}
-                                            blogType={'news'}
-                                        />
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Categories */}
-                        <h1 className="text-center text-lg font-semibold mt-4 text-gray-700">Categories</h1>
-                        <div className="p-4 mx-auto xl:w-full md:w-1/2 space-y-2">
-                            {categories.map((category) => (
-                                <Link key={category.name} href="/" className="text-sm p-2 flex justify-between items-center border-b border-gray-200 hover:bg-gray-200 transition">
-                                    <span className="text-gray-700">{category.name}</span>
-                                    <span className="text-gray-500 text-sm">({category.count})</span>
+                    {/* Popular Post */}
+                    <div className="m-auto flex flex-wrap gap-2 md:hidden lg:block md:w-full lg:w-1/2 xl:w-full">
+                        <h1 className="text-center text-lg font-bold mt-7 mb-2 text-gray-700">Popular Post</h1>
+                        <div className="grid grid-cols-1 grid-rows-2 gap-2 overflow-hidden">
+                            {blogs2.map((blog, index) => (
+                                <Link href="/" key={index}>
+                                    <BlogCard
+                                        title={blog.title}
+                                        author={blog.author}
+                                        time={blog.time}
+                                        image={blog.image}
+                                        // category={blog.category}
+                                        blogType={'news'}
+                                    />
                                 </Link>
                             ))}
                         </div>
+                    </div>
 
-                        {/* tags */}
-                        <h1 className="text-center text-lg font-semibold mt-10 text-gray-700">Tags</h1>
-                        <div className="p-4 mx-auto xl:w-full md:w-1/2">
-                            <div className="flex flex-wrap items-center justify-center gap-2">
-                                {tagsData.map((tag, index) => (
-                                    <span
-                                        key={index}
-                                        className={`py-1 rounded-full font-medium text-indigo-900/80 hover:text-black hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
-                                        onClick={() => alert(`Tag ${tag.name} clicked!`)}
-                                    >
-                                        {tag.name}
-                                    </span>
-                                ))}
-                            </div>
+                    {/* Categories */}
+                    <h1 className="text-center text-lg font-semibold mt-4 text-gray-700">Categories</h1>
+                    <div className="p-4 mx-auto xl:w-full md:w-1/2 space-y-2">
+                        {categories.map((category) => (
+                            <Link key={category.name} href="/" className="text-sm p-2 flex justify-between items-center border-b border-gray-200 hover:bg-gray-200 transition">
+                                <span className="text-gray-700">{category.name}</span>
+                                <span className="text-gray-500 text-sm">({category.count})</span>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* tags */}
+                    <h1 className="text-center text-lg font-semibold mt-10 text-gray-700">Tags</h1>
+                    <div className="p-4 mx-auto xl:w-full md:w-1/2">
+                        <div className="flex flex-wrap items-center justify-center gap-2">
+                            {tagsData.map((tag, index) => (
+                                <span
+                                    key={index}
+                                    className={`py-1 rounded-full font-medium text-indigo-900/80 hover:text-black hover:scale-3d translate-0.5 hover:cursor-pointer ${tag.size}`}
+                                    onClick={() => alert(`Tag ${tag.name} clicked!`)}
+                                >
+                                    {tag.name}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        </section >
     );
 }

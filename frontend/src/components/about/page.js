@@ -10,17 +10,18 @@ export default function About() {
             className={clsx(
                 "container lg:w-5xl mx-auto",
                 "pt-16 pb-10",
-                "flex items-center justify-between"
+                "flex items-center justify-between",
+                "max-sm:px-4"
             )}
         >
             <div className={clsx(
                 "bg-white py-16",
-                "grid grid-cols-4 grid-rows-[auto,1fr,1fr] gap-y-10 gap-x-2"
+                "grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-[auto,1fr,1fr] gap-y-10 gap-x-2"
             )} >
 
                 {/* Section Title */}
                 <div className={clsx(
-                    "row-start-1 col-start-2 col-span-3 row-span-1"
+                    "row-start-1 lg:col-start-2 lg:col-span-3 row-span-1"
                 )}>
                     <p className="text-sm font-semibold text-indigo-600 mb-2">About us</p>
                     <h2 className="text-2xl font-bold tracking-tight text-gray-700 drop-shadow-sm">
@@ -35,7 +36,7 @@ export default function About() {
 
                 {/* Mission Text */}
                 <div className={clsx(
-                    "row-start-2 col-start-3 col-span-2 row-span-2",
+                    "lg:row-start-2 lg:col-start-3 lg:col-span-2 row-span-2",
                 )} >
 
                     <h3 className="text-lg font-semibold text-gray-700 mb-4">My Carrer</h3>
@@ -69,39 +70,31 @@ export default function About() {
 
                 {/* Image grid */}
                 <div className={clsx(
-                    "row-start-2 col-start-1 col-span-2 row-span-2",
-                    "lg:grid grid-cols-2 gap-x-3"
+                    "md:row-start-2 lg:row-start-2 lg:col-start-1 lg:col-span-2 lg:row-span-2 md:inline-grid hidden",
+                    "grid grid-cols-2 gap-x-3"
                 )}>
-                    <div className="space-y-5 -translate-y-20">
+                    <div className="space-y-5 lg:-translate-y-20 flex flex-row gap-4 lg:flex-col lg:gap-0">
                         <Image
                             src="/images/gen3.png"
                             alt="Working together"
-                            width={210}
-                            height={260}
-                            className="w-full rounded-xl shadow-lg object-cover"
+                            className="w-52 h-64 rounded-xl shadow-lg object-cover "
                         />
                         <Image
                             src="/images/gen2.png"
                             alt="Team meeting"
-                            width={210}
-                            height={260}
-                            className="w-full rounded-xl shadow-lg object-cover"
+                            className="w-52 h-64 rounded-xl shadow-lg object-cover md:max-lg:translate-y-8"
                         />
                     </div>
-                    <div className="space-y-6 -translate-x-2">
+                    <div className="space-y-6 lg:-translate-x-2 flex flex-row-reverse gap-4 lg:flex-col lg:gap-0">
                         <Image
                             src="/images/gen2.png"
                             alt="Office work"
-                            width={210}
-                            height={260}
-                            className="w-full rounded-xl shadow-lg object-cover"
+                            className="w-52 h-64 rounded-xl shadow-lg object-cover md:max-lg:translate-y-8"
                         />
                         <Image
                             src="/images/gen3.png"
                             alt="Remote call"
-                            width={210}
-                            height={260}
-                            className="w-full rounded-xl shadow-lg object-cover"
+                            className="w-52 h-64 rounded-xl shadow-lg object-cover"
                         />
                     </div>
                 </div>

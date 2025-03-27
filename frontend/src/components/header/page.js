@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-// import { Menu, Transition } from "@headlessui/react";
 import { SunIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ export default function Header() {
 
     return (
         <header className="w-full container mx-auto">
-            <div className="mx-auto xl:w-5xl flex items-center justify-between mt-4 rounded-2xl">
+            <div className="mx-auto xl:w-5xl flex items-center justify-between mt-4 max-sm:px-2 rounded-2xl">
                 {/* Logo */}
                 <Link href="/" className="text-lg font-bold">
                     <span className="text-gray-800">{`<tm />`}</span>
@@ -49,7 +48,7 @@ export default function Header() {
                 </nav>
 
                 {/* Mobile Menu */}
-                <div className="md:hidden">
+                <div className="relative md:hidden transition duration-300">
                     <button onClick={() => setIsOpen(!isOpen)} className="p-2">
                         {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
                     </button>

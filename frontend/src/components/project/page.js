@@ -3,6 +3,7 @@ import { Card, CardFooter, CardBody, Image } from "@heroui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import Pagination from "@components/pagination/page";
 import { ProjectCard } from "@components/card";
+import clsx from 'clsx'
 
 const projects = [
     {
@@ -35,7 +36,10 @@ export default function Project() {
     const [currentPage, setCurrentPage] = useState(1);
 
     return (
-        <section id="projects" className="container lg:w-5xl pt-24 pb-10 mx-auto ">
+        <section id="projects" className={clsx(
+            "container lg:w-5xl pt-24 pb-10 mx-auto",
+            "max-sm:px-4"
+        )}>
             <div className="flex flex-col items-center">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-700 drop-shadow-sm">Projects</h2>
                 <p className="mt-2 text-gray-600">

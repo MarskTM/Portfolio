@@ -14,7 +14,8 @@ export default function Footer() {
                 "relative container xl:w-5xl m-auto",
                 "pt-8 mb-8 m-auto px-2",
                 "text-gray-800 dark:text-white",
-                "border-t-2 border-gray-200"
+                "border-t-2 border-gray-200",
+                "max-sm:px-4"
             )}
         >
             <div className="xl:w-5xl m-auto flex flex-row items-start justify-between gap-2">
