@@ -8,7 +8,7 @@ export default function About() {
         <div
             id="about"
             className={clsx(
-                "container lg:w-5xl mx-auto",
+                "container lg:w-5xl mx-auto z-20",
                 "pt-16 pb-10",
                 "flex items-center justify-between",
                 "max-sm:px-4"
@@ -77,24 +77,24 @@ export default function About() {
                         <Image
                             src="/images/gen3.png"
                             alt="Working together"
-                            className="w-52 h-64 rounded-xl shadow-lg object-cover "
+                            className="w-52 h-64 rounded-xl shadow-lg"
                         />
                         <Image
                             src="/images/gen2.png"
                             alt="Team meeting"
-                            className="w-52 h-64 rounded-xl shadow-lg object-cover md:max-lg:translate-y-8"
+                            className="w-52 h-64 rounded-xl shadow-lg md:max-lg:translate-y-8"
                         />
                     </div>
                     <div className="space-y-6 lg:-translate-x-2 flex flex-row-reverse gap-4 lg:flex-col lg:gap-0">
                         <Image
                             src="/images/gen2.png"
                             alt="Office work"
-                            className="w-52 h-64 rounded-xl shadow-lg object-cover md:max-lg:translate-y-8"
+                            className="w-52 h-64 rounded-xl shadow-lg md:max-lg:translate-y-8"
                         />
                         <Image
                             src="/images/gen3.png"
                             alt="Remote call"
-                            className="w-52 h-64 rounded-xl shadow-lg object-cover"
+                            className="w-52 h-64 rounded-xl shadow-lg"
                         />
                     </div>
                 </div>

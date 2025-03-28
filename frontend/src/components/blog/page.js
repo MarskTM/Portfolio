@@ -97,7 +97,7 @@ export default function Blog() {
     return (
         <section
             id="blogs"
-            className="w-full container m-auto pt-24 pb-10"
+            className="w-full container m-auto pt-24 pb-10 z-20"
         >
             <div className="lg:w-5xl mx-auto text-center">
                 {/* Tiêu đề */}

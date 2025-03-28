@@ -9,7 +9,7 @@ const agbalumo = Agbalumo({
 
 export default function Blogs() {
     return (
-        <div className="">
+        <div className="h-svh">
             <div className="container w-5xl m-auto my-10 border-b-1 border-gray-200">
                 <h1 className={clsx(
                     "text-2xl md:text-5xl font-extrabold tracking-tight text-gray-900 drop-shadow-md",
@@ -32,11 +32,11 @@ export default function Blogs() {
                     Happy reading 🍵
                 </p>
 
-                <div className="container pb-6 rounded-2xl">
-                    
+                <div className="container pb-6 rounded-2xl">   
                 </div>
             </div>
-
+            
+            
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import {  Fredoka } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -26,8 +26,9 @@ export const theme = create((set) => ({
 }))
 
 // -------------------------------- Component layout --------------------------------
-import Header from "../components/header/page";
-import Footer from "../components/footer/page";
+import Header from "@components/header/page";
+import Footer from "@components/footer/page";
+// import ScrollToTopButton from "@components/button/scrollTop";
 
 export default function RootLayout({ children }) {
   return (
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          {/* <ScrollToTopButton /> */}
         </Providers>
       </body>
     </html>

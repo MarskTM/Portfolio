@@ -32,7 +32,7 @@ export default function Banner() {
 
     return (
         <section className={clsx(
-            "container lg:w-5xl pt-28 pb-12 m-auto",
+            "container lg:w-5xl pt-28 pb-12 m-auto z-20",
             "flex flex-col md:flex-row items-center gap-10 justify-between",
             "rounded-lg",
             "max-sm:pt-7"

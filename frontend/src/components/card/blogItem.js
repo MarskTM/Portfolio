@@ -16,7 +16,7 @@ export default function BlogCard({ title, description, author, time, category, i
             {/* Hình ảnh */}
             <div className={clsx(
                 blogStyle.containerV2,
-                `flex-shrink-0 rounded-2xl relative z-0`)}>
+                `flex-shrink-0 rounded-2xl relative z-20`)}>
                 <div className={clsx(
                     blogStyle.postition,
                     blogStyle.animation,
@@ -81,7 +81,7 @@ function getInfoByBlogType(blogType) {
             return {
                 containerV1: "space-x-3 px-2 py-3",
                 containerV2: "w-32 h-40 border-2 border-gray-500",
-                image: "w-32 h-40 shadow-xl rounded-2xl",
+                image: "w-32 h-40 shadow-xl rounded-2xl z-20",
                 titleFont: "h-28 text-base animated-title",
                 postition: "absolute -top-3 -left-3 z-10 p-0 m-0",
                 animation: "hover:translate-2  hover:blur-sm duration-300",

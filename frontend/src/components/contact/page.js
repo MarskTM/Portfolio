@@ -6,7 +6,7 @@ import clsx from 'clsx'
 export default function Contact() {
     return (
         <section id="contact" className={clsx(
-            "container lg:w-5xl my-28 m-auto space-x-4 text-gray-300",
+            "container lg:w-5xl my-28 m-auto space-x-4 z-20 text-gray-300",
             "max-sm:px-4"
         )}>
             <div className="container mx-auto flex flex-col space-x-4">
