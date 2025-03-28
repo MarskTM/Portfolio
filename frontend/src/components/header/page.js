@@ -38,9 +38,15 @@ export default function Header() {
         }
     };
 
+    const handleNavigationOtherPage = () => {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 400);
+    };
+
     return (
-        <header className="sticky top-2 z-50 w-full container mx-auto">
-            <div className="mx-auto xl:w-[65rem] flex items-center justify-between mt-4 px-2 py-1 rounded-2xl bg-indigo-50">
+        <header className="sticky top-1 z-50 w-full container mx-auto">
+            <div className="mx-auto xl:w-[65rem] flex items-center justify-between mt-4 px-2 py-2 rounded-2xl bg-white/75 backdrop-blur">
                 {/* Logo */}
                 <Link href="/" className="text-lg font-bold">
                     <span className="text-gray-800">{`<tm />`}</span>
@@ -58,13 +64,17 @@ export default function Header() {
                         </button>
                     ))}
                     {/* Light mode toggle */}
-                    <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition">
+                    <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+                    >
                         <SunIcon className="h-5 w-5 text-gray-700" />
                     </button>
                     {/* Blog button */}
                     <Link
                         href="/blog"
-                        className="px-4 py-1 text-base text-white bg-black rounded-full hover:bg-gray-800 transition"
+                        className="px-4 py-1 text-sm text-white bg-black rounded-full hover:bg-gray-800 transition"
+                        onClick={() => {
+                            handleNavigationOtherPage();
+                        }}
                     >
                         Download CV
                     </Link>
@@ -100,7 +110,9 @@ export default function Header() {
                         <Link
                             href="/blog"
                             className="px-4 py-2 text-white bg-black rounded-full hover:bg-gray-800 transition"
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => {
+                                handleNavigationOtherPage();
+                            }}
                         >
                             My Blog
                         </Link>
