@@ -61,7 +61,7 @@ export default function Footer() {
                 <div className="mt-5 lg:mr-5 grid grid-cols-2 justify-items-center gap-8 lg:gap-14">
                     <div>
                         <h3 className="font-semibold text-base">Sitemap</h3>
-                        <ul className="mt-4 space-y-2.5 text-sm flex flex-col">
+                        <ul className="mt-4 space-y-2.5 text-sm flex flex-col items-end">
                             <li className='animated-title'>About Me</li>
                             <li className='animated-title'>Projects</li>
                             <li className='animated-title'>Blogs</li>
@@ -70,7 +70,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-base">Personal stuff</h3>
-                        <ul className="mt-4 space-y-2.5 text-sm flex flex-col">
+                        <ul className="mt-4 space-y-2.5 text-sm flex flex-col items-end">
                             <li className='animated-title'>Resume</li>
                             <li className='animated-title'>Books</li>
                             <li className='animated-title'>Analytics</li>
