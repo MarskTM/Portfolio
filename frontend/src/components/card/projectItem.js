@@ -1,14 +1,20 @@
 import { CubeIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
-export default function ProjectCard() {
+export default function ProjectCard({ project, aosDelay }) {
     return (
-        <div className={clsx(
-            "w-xl lg:w-md h-60 p-6 my-1 m-auto",
-            "bg-white shadow-md rounded-2xl border border-gray-100",
-            "hover:shadow-xl hover:shadow-blue-300/10 transition-shadow",
-            "duration-300 ease-linear",
-        )}>
+        <div
+            className={clsx(
+                "w-xl lg:w-md h-60 p-6 my-1 m-auto",
+                "bg-white shadow-md rounded-2xl border border-gray-100",
+                "hover:shadow-xl hover:shadow-blue-300/10 transition-shadow",
+                "duration-300 ease-linear",
+            )}
+            data-aos="fade-down"
+            data-aos-delay={aosDelay}
+            data-aos-duration="800"
+            data-aos-anchor-placement="center-bottom"
+        >
             {/* Header */}
             <div className="flex items-center space-x-4 mb-4">
                 <div className="bg-black p-2 rounded-lg">

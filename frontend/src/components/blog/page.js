@@ -117,8 +117,8 @@ export default function Blog() {
                     <div className="max-sm:px-4 xl:flex-2/3 container mx-auto">
                         <div className="flex items-center justify-between mt-10">
                             <h1 className="text-left text-xl text-gray-600 font-bold mb-4">Keep Reading</h1>
-                            <Link href="/" className="text-vase font-bold flex flex-row justify-center items-center">
-                                <span className="text-xs text-gray-500 hover:text-blue-400">See more</span><ChevronDoubleRightIcon className="size-4 text-blue-900" />
+                            <Link href="/blog" className="text-vase font-bold flex flex-row justify-center items-center">
+                                <span className="text-xs text-gray-500 hover:text-blue-400">See more</span><ChevronDoubleRightIcon className="size-2 text-blue-900" />
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 gap-4">

@@ -1,5 +1,5 @@
 
-import { Image } from "@heroui/react";
+import { Image, Skeleton } from "@heroui/react";
 import clsx from 'clsx'
 import { ClockIcon } from "@heroicons/react/24/solid";
 
@@ -7,16 +7,21 @@ export default function BlogCard({ title, description, author, time, category, i
     let blogStyle = getInfoByBlogType(blogType);
 
     return (
-        <div className={clsx(
-            blogStyle.containerV1,
-            "flex flex-row items-start justify-evenly",
-            "rounded-lg transition-all duration-500 animated-container"
-        )}>
+        <div
+            className={clsx(
+                blogStyle.containerV1,
+                "flex flex-row items-start justify-evenly",
+                "rounded-lg transition-all duration-500 animated-container",
+            )}
+        >
 
             {/* Hình ảnh */}
-            <div className={clsx(
-                blogStyle.containerV2,
-                `flex-shrink-0 rounded-2xl relative z-20`)}>
+            <div
+                className={clsx(
+                    blogStyle.containerV2,
+                    "flex-shrink-0 rounded-2xl relative z-20",
+                )}
+            >
                 <div className={clsx(
                     blogStyle.postition,
                     blogStyle.animation,
@@ -38,11 +43,13 @@ export default function BlogCard({ title, description, author, time, category, i
 
                 {/* Tiêu đề */}
                 <div className="text-left">
-                    <h2 className={clsx(`max-w-full font-semibold text-gray-700 cursor-pointer`,
-                        blogStyle.titleFont,
-                    )}>
-                        {title}
-                    </h2>
+                    <Skeleton className="rounded-lg" isLoaded={true}>
+                        <h2 className={clsx(`max-w-full font-semibold text-gray-700 cursor-pointer`,
+                            blogStyle.titleFont,
+                        )}>
+                            {title}
+                        </h2>
+                    </Skeleton>
                 </div>
 
                 {/* Danh mục */}

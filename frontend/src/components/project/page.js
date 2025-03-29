@@ -50,7 +50,7 @@ export default function Project() {
 
             <div className="mx-auto mt-10 flex flex-wrap gap-4 justify-items-center">
                 {projects.map((project, index) => (
-                    <ProjectCard key={index} />
+                    <ProjectCard key={index} aosDelay={index * 200} />
                 ))}
             </div>
             <div className="md:mx-16 flex flex-row justify-end mt-4">

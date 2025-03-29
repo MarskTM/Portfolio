@@ -29,7 +29,6 @@ const introduction = [
 
 export default function Banner() {
 
-
     return (
         <section className={clsx(
             "container lg:w-5xl pt-28 pb-12 m-auto z-20",

@@ -20,9 +20,15 @@ export default function About() {
             )} >
 
                 {/* Section Title */}
-                <div className={clsx(
-                    "row-start-1 lg:col-start-2 lg:col-span-3 row-span-1"
-                )}>
+                <div
+                    className={clsx(
+                        "row-start-1 lg:col-start-2 lg:col-span-3 row-span-1"
+                    )} 
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    data-aos-duration="700"
+                    data-aos-anchor-placement="top-bottom"
+                >
                     <p className="text-sm font-semibold text-indigo-600 mb-2">About us</p>
                     <h2 className="text-2xl font-bold tracking-tight text-gray-700 drop-shadow-sm">
                         A bit about my journey
@@ -35,9 +41,15 @@ export default function About() {
                 </div>
 
                 {/* Mission Text */}
-                <div className={clsx(
-                    "lg:row-start-2 lg:col-start-3 lg:col-span-2 row-span-2",
-                )} >
+                <div
+                    className={clsx(
+                        "lg:row-start-2 lg:col-start-3 lg:col-span-2 row-span-2",
+                    )} 
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    data-aos-duration="900"
+                    data-aos-anchor-placement="top-bottom"
+                >
 
                     <h3 className="text-lg font-semibold text-gray-700 mb-4">My Carrer</h3>
                     <p className="text-gray-700 mb-4 text-base">

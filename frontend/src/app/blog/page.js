@@ -1,4 +1,7 @@
-import { Input } from "@heroui/input";
+"use client"
+
+import React from "react";
+import { Card, Skeleton, Button } from "@heroui/react";
 import { Agbalumo } from 'next/font/google'
 import clsx from 'clsx'
 
@@ -8,6 +11,12 @@ const agbalumo = Agbalumo({
 })
 
 export default function Blogs() {
+    const [isLoaded, setIsLoaded] = React.useState(false);
+
+    const toggleLoad = () => {
+        setIsLoaded(!isLoaded);
+    };
+
     return (
         <div className="max-h-screen min-h-[80vh]">
             <div className="container w-5xl m-auto my-10 border-b-1 border-gray-200">
@@ -32,10 +41,31 @@ export default function Blogs() {
                     Happy reading 🍵
                 </p>
 
-                <div className="container pb-6 rounded-2xl">   
+                <div className="container pb-6 rounded-2xl">
+                    <div className="flex flex-col gap-3">
+                        <Card className="w-[200px] space-y-5 p-4" radius="lg">
+                            <Skeleton className="rounded-lg" isLoaded={isLoaded}>
+                                <div className="h-24 rounded-lg bg-secondary" />
+                            </Skeleton>
+                            <div className="space-y-3">
+                                <Skeleton className="w-3/5 rounded-lg" isLoaded={isLoaded}>
+                                    <div className="h-3 w-full rounded-lg bg-secondary" />
+                                </Skeleton>
+                                <Skeleton className="w-4/5 rounded-lg" isLoaded={isLoaded}>
+                                    <div className="h-3 w-full rounded-lg bg-secondary-300" />
+                                </Skeleton>
+                                <Skeleton className="w-2/5 rounded-lg" isLoaded={isLoaded}>
+                                    <div className="h-3 w-full rounded-lg bg-secondary-200" />
+                                </Skeleton>
+                            </div>
+                        </Card>
+                        <Button color="secondary" size="sm" variant="flat" onPress={toggleLoad}>
+                            {isLoaded ? "Show" : "Hide"} Skeleton
+                        </Button>
+                    </div>
                 </div>
             </div>
-            
+
             <div className="w-5xl m-auto">Đang xây dựng ... ^.^</div>
         </div>
     )
