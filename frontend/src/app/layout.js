@@ -26,9 +26,9 @@ export const theme = create((set) => ({
 }))
 
 // -------------------------------- Component layout --------------------------------
-import Header from "@components/header/page";
-import Footer from "@components/footer/page";
-import AOSInit from "@components/animate/AOSInit";
+import Header from "@/components/header/page";
+import Footer from "@/components/footer/page";
+import AOSInit from "@/components/animate/AOSInit";
 
 export default function RootLayout({ children }) {
   return (

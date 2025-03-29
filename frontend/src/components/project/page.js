@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Card, CardFooter, CardBody, Image } from "@heroui/react";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import Pagination from "@components/pagination/page";
-import { ProjectCard } from "@components/card";
+import Pagination from "@/components/pagination/page";
+import { ProjectCard } from "@/components/card";
 import clsx from 'clsx'
 
 const projects = [

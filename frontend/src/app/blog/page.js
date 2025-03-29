@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { Card, Skeleton, Button } from "@heroui/react";
+import { Input } from "@/components/ui/input"
 import { Agbalumo } from 'next/font/google'
 import clsx from 'clsx'
 
@@ -18,14 +18,14 @@ export default function Blogs() {
     };
 
     return (
-        <div className="max-h-screen min-h-[80vh]">
-            <div className="container w-5xl m-auto my-10 border-b-1 border-gray-200">
+        <div className="max-h-screen min-h-[80vh] w-full">
+            <div className="container lg:w-5xl m-auto my-10 max-sm:px-4 border-b-1 border-gray-200">
                 <h1 className={clsx(
-                    "text-2xl md:text-5xl font-extrabold tracking-tight text-gray-900 drop-shadow-md",
+                    "text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 drop-shadow-md",
                     "flex items-center gap-2",
                     agbalumo.className
                 )}>
-                    All post <span className="md:text-4xl">📰</span>
+                    All post <span className="text-3xl md:text-4xl">📰</span>
                 </h1>
                 <p className={clsx(
                     "mt-12 mb-3 text-lg text-gray-900",
@@ -42,26 +42,26 @@ export default function Blogs() {
                 </p>
 
                 <div className="container pb-6 rounded-2xl">
-                    <div className="flex flex-col gap-3">
-                        <Card className="w-[200px] space-y-5 p-4" radius="lg">
-                            <Skeleton className="rounded-lg" isLoaded={isLoaded}>
-                                <div className="h-24 rounded-lg bg-secondary" />
-                            </Skeleton>
-                            <div className="space-y-3">
-                                <Skeleton className="w-3/5 rounded-lg" isLoaded={isLoaded}>
-                                    <div className="h-3 w-full rounded-lg bg-secondary" />
-                                </Skeleton>
-                                <Skeleton className="w-4/5 rounded-lg" isLoaded={isLoaded}>
-                                    <div className="h-3 w-full rounded-lg bg-secondary-300" />
-                                </Skeleton>
-                                <Skeleton className="w-2/5 rounded-lg" isLoaded={isLoaded}>
-                                    <div className="h-3 w-full rounded-lg bg-secondary-200" />
-                                </Skeleton>
-                            </div>
-                        </Card>
-                        <Button color="secondary" size="sm" variant="flat" onPress={toggleLoad}>
-                            {isLoaded ? "Show" : "Hide"} Skeleton
-                        </Button>
+                    <div className="relative lg:w-2/3 max-sm:min-w-56 ">
+                        <Input
+                            type="text"
+                            placeholder="Do you have a notion?"
+                            className="w-full pr-10" // chừa chỗ cho icon
+                        />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="absolute right-3 top-1/2 transform -translate-y-1/2 size-5 text-gray-500"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                            />
+                        </svg>
                     </div>
                 </div>
             </div>

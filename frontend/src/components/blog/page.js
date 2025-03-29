@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
-import { BlogCard } from "@components/card";
+import { BlogCard } from "@/components/card";
 import clsx from 'clsx'
 
 const blogs = [
