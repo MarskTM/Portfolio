@@ -99,6 +99,16 @@ function getInfoByBlogType(blogType) {
                 image: "w-16 h-16 rounded-md",
                 titleFont: "text-xs line-clamp-2 overflow-y-hidden text-ellipsis hover:text-blue-500 duration-300",
             };
+        case "alls":
+            return {
+                containerV1: "space-x-8 px-2 py-3",
+                containerV2: "w-40 h-46 border-2 border-gray-500",
+                image: "w-40 h-46 shadow-xl rounded-2xl z-20",
+                titleFont: "h-28 text-xl animated-title",
+                postition: "absolute -top-3 -left-3 z-10 p-0 m-0",
+                animation: "hover:translate-2  hover:blur-sm duration-300",
+            };
+        
         default:
             return {
                 image: `w-auto h-auto`,

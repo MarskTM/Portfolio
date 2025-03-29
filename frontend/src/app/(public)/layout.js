@@ -1,5 +1,5 @@
 import { Fredoka } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const fredoka = Fredoka({
   weight: '400',
@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
-          {/* <ScrollToTopButton /> */}
         </Providers>
       </body>
     </html>

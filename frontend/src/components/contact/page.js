@@ -26,12 +26,17 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className={clsx(
-                    "md:self-end self-auto",
-                    "md:w-5/6 mt-16 h-60 p-7",
-                    "flex flex-row items-center justify-between space-x-4",
-                    "shadow-lg rounded-xl dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center",
-                )}>
+                <div
+                    className={clsx(
+                        "md:self-end self-auto",
+                        "md:w-5/6 mt-16 h-60 p-7",
+                        "flex flex-row items-center justify-between space-x-4",
+                        "shadow-lg rounded-xl dark:bg-gray-800 bg-[image:url('/images/contact_bg.svg')] bg-cover bg-center",
+                    )}
+                    data-aos="zoom-in"
+                    data-aos-duration="500"
+                    data-aos-anchor-placement="bottom-bottom"
+                >
                     <div>
                         {/* Tiêu đề */}
                         <h2 className="text-xl font-bold text-gray-900 dark:text-white">

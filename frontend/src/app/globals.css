@@ -47,6 +47,7 @@
 }
 
 @layer utilities {
+
   .animated-title {
     display: inline;
     background-image: linear-gradient(to right, #d1dcf8 100%, #d1dcf8 100%);
@@ -59,6 +60,7 @@
     text-align: left;
   }
 
+  .animated-container:hover .animated-title,
   .animated-title:hover {
     background-size: 100% calc(1.5em / 3);
   }
